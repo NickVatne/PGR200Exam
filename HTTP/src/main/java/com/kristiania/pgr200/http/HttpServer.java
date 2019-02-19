@@ -1,6 +1,7 @@
 package com.kristiania.pgr200.http;
 
 import com.kristiania.pgr200.database.DatabaseHandler.DatabaseHandler;
+import com.kristiania.pgr200.database.dataSource.DatabaseConnector;
 
 import java.io.IOException;
 import java.io.InputStream;
