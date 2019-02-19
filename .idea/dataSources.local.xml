@@ -7,7 +7,7 @@
       </database-info>
       <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
       <secret-storage>master_key</secret-storage>
-      <user-name>nicolai</user-name>
+      <user-name>person1</user-name>
       <introspection-schemas>@:@</introspection-schemas>
     </data-source>
   </component>
