@@ -13,18 +13,26 @@ import java.util.List;
 
 public class TaskDao extends AbstractDao {
 
+    private String updateSQL = "INSERT INTO TASK (TITLE, DESCRIPTION, STATUS, TIMEMANAGER_ID) VALUES (?,?,?,?)";
+    private String sqlUpdateTitle = "UPDATE TASK SET TITLE = ? WHERE ID = ?";
+    private String sqlUpdateDesc = "UPDATE TASK SET DESCRIPTION = ? WHERE ID = ?";
+    private String sqlUpdateStatus = "UPDATE TASK SET STATUS = ? WHERE ID = ?";
+    private String sqlGetAll = "SELECT * FROM TASK";
+
     public TaskDao(DataSource dataSource){
         super(dataSource);
     }
+
     public List<Task> getAll() throws SQLException {
-        return list("SELECT * FROM TASK", this::mapToTask);
+        return list(sqlGetAll, this::mapToTask);
     }
     public void save(Task task) throws SQLException {
         try (Connection connection = dataSource.getConnection()){
-            String sql = "INSERT INTO TASK (TASK) VALUES (?)";
-            try (PreparedStatement statement = connection.prepareStatement(sql, PreparedStatement.RETURN_GENERATED_KEYS)){
+            try (PreparedStatement statement = connection.prepareStatement(updateSQL, PreparedStatement.RETURN_GENERATED_KEYS)){
                 statement.setString(1,task.getTitle());
-
+                statement.setString(2, task.getDescription());
+                statement.setString(3, task.getStatus());
+                statement.setInt(4, task.getTimemanagerId());
                 statement.executeUpdate();
 
                 try (ResultSet resultSet = statement.getGeneratedKeys()){
@@ -40,6 +48,15 @@ public class TaskDao extends AbstractDao {
         task.setTitle(rs.getString("TASK"));
 
         return task;
+    }
+    private void addToStatement(int id, String title, String sqlUpdateTitle) throws SQLException{
+        try (Connection connection = dataSource.getConnection()){
+            try(PreparedStatement statement = connection.prepareStatement(sqlUpdateTitle)) {
+                statement.setString(1, title);
+                statement.setLong(2,id);
+                statement.executeUpdate();
+            }
+        }
     }
     public List<ProjectFormatted> getAllProjectsFormatted() throws SQLException {
         String sql = "SELECT ta.id, ta title, ta.description, ta.status, tm.first_user, tm.second_user, tm.third_user from TASK ta"
@@ -64,4 +81,14 @@ public class TaskDao extends AbstractDao {
             }
         }
     }
+    public void updateTitle(int id, String title) throws SQLException {
+        addToStatement(id,title,sqlUpdateTitle);
+    }
+    public void updateDesc(int id, String desc) throws SQLException{
+        addToStatement(id, desc, sqlUpdateDesc);
+    }
+    public void updateStatus(int id, String status) throws SQLException{
+        addToStatement(id, status, sqlUpdateStatus);
+    }
+
 }

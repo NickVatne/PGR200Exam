@@ -42,7 +42,11 @@ public class ProjectFormatted {
     public String getThird_user() {
         return third_user;
     }
+
     public static String createHeaderLine(){
         return String.format(COLUMNFORMAT, "|ID|", "|TITLE|", "|DESCRIPTION|", "|STATUS|", "|FIRST_USER|", "|SECOND_USER|", "|THIRD_USER|");
+    }
+    public String formatOutput(){
+        return String.format(COLUMNFORMAT, id, title, description, status, first_user, second_user, third_user);
     }
 }
