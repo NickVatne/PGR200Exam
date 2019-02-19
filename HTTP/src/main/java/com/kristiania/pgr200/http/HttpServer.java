@@ -1,7 +1,5 @@
 package com.kristiania.pgr200.http;
 
-import com.kristiania.pgr200.database.DatabaseHandler.DatabaseHandler;
-
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -13,7 +11,7 @@ import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Server {
+public class HttpServer {
     private ServerSocket serverSocket;
     private int actualPort;
     private String baseUrl;
@@ -102,7 +100,7 @@ public class Server {
     }
 
     private String doGet(String path) throws SQLException {
-        if (path.equals("db/task")) {
+        if (path.equals("db/talks")) {
             return new DatabaseHandler().listAllTalks();
         }
         return null;
@@ -113,7 +111,7 @@ public class Server {
             baseUrl = path.split("\\?")[0];
             parameters = getParameters(path);
         }
-        if (baseUrl.equals("/db/task")) {
+        if (baseUrl.equals("/db/talks")) {
             new DatabaseHandler().insertTalk(parameters);
         }
 
@@ -130,7 +128,7 @@ public class Server {
         if (baseUrl.equals("/db/talk/desc")) {
             new DatabaseHandler().updateTalkDesc(parameters);
         }
-        if (baseUrl.equals("/db/talk/status")) {
+        if (baseUrl.equals("/db/talk/topic")) {
             new DatabaseHandler().updateTalkTopic(parameters);
         }
 
@@ -173,10 +171,3 @@ public class Server {
         return null;
     }
 }
-
-
-
-
-
-
-
