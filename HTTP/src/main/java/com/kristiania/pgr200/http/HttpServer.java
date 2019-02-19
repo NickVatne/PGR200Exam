@@ -1,5 +1,8 @@
 package com.kristiania.pgr200.http;
 
+import com.kristiania.pgr200.database.DatabaseHandler.DatabaseHandler;
+import com.kristiania.pgr200.database.dataSource.DatabaseConnector;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -18,14 +21,14 @@ public class HttpServer {
     private Map<String, String> parameters = new HashMap<>();
 
 
-    public Server(int port) throws IOException {
+    public HttpServer(int port) throws IOException {
         this.serverSocket = new ServerSocket(port);
         this.actualPort = serverSocket.getLocalPort();
     }
 
 
     public static void main(String[] args) throws IOException {
-        Server server = new Server(12080);
+        HttpServer server = new HttpServer(12080);
         server.start();
     }
 
