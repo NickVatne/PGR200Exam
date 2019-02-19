@@ -5,6 +5,7 @@ import com.kristiania.pgr200.database.dao.TaskManagerDao;
 import com.kristiania.pgr200.database.dataSource.DatabaseConnector;
 import com.kristiania.pgr200.database.entity.ProjectFormatted;
 import com.kristiania.pgr200.database.entity.Task;
+import com.kristiania.pgr200.database.entity.TaskManager;
 
 import javax.sql.DataSource;
 import java.sql.SQLException;
@@ -78,6 +79,14 @@ public class DatabaseHandler {
         String status = parameteres.get("status");
 
         taskDao.updateStatus(id, status);
+    }
+
+    public List<Task> getAllAvailableTasks() throws SQLException {
+        return taskDao.getAll();
+    }
+
+    public List<TaskManager> getAllAvailableTaskManagers() throws SQLException {
+        return taskManagerDao.getAll();
     }
 
 }

@@ -103,8 +103,8 @@ public class HttpServer {
     }
 
     private String doGet(String path) throws SQLException {
-        if (path.equals("db/talks")) {
-            return new DatabaseHandler().listAllTalks();
+        if (path.equals("db/task")) {
+            return new DatabaseHandler().listAllProject();
         }
         return null;
     }
@@ -114,8 +114,8 @@ public class HttpServer {
             baseUrl = path.split("\\?")[0];
             parameters = getParameters(path);
         }
-        if (baseUrl.equals("/db/talks")) {
-            new DatabaseHandler().insertTalk(parameters);
+        if (baseUrl.equals("/db/task")) {
+            new DatabaseHandler().insertProject(parameters);
         }
 
     }
@@ -125,14 +125,14 @@ public class HttpServer {
             baseUrl = path.split("\\?")[0];
             parameters = getParameters(path);
         }
-        if (baseUrl.equals("/db/talk/title")) {
-            new DatabaseHandler().updateTalkTitle(parameters);
+        if (baseUrl.equals("/db/task/title")) {
+            new DatabaseHandler().updateTaskTitle(parameters);
         }
-        if (baseUrl.equals("/db/talk/desc")) {
-            new DatabaseHandler().updateTalkDesc(parameters);
+        if (baseUrl.equals("/db/task/desc")) {
+            new DatabaseHandler().updateTaskDesc(parameters);
         }
-        if (baseUrl.equals("/db/talk/topic")) {
-            new DatabaseHandler().updateTalkTopic(parameters);
+        if (baseUrl.equals("/db/task/topic")) {
+            new DatabaseHandler().updateTaskStatus(parameters);
         }
 
     }
