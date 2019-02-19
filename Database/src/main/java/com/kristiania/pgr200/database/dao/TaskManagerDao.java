@@ -24,8 +24,8 @@ public class TaskManagerDao extends AbstractDao {
         try (Connection connection = dataSource.getConnection()){
             try (PreparedStatement statement = connection.prepareStatement(sqlSave, PreparedStatement.RETURN_GENERATED_KEYS)){
                 statement.setString(1, taskManager.getFirstUser());
-                statement.setString(1, taskManager.getSecondUser());
-                statement.setString(1, taskManager.getThirdUser());
+                statement.setString(2, taskManager.getSecondUser());
+                statement.setString(3, taskManager.getThirdUser());
                 statement.executeUpdate();
                 try (ResultSet resultSet = statement.getGeneratedKeys()){
                     resultSet.next();
