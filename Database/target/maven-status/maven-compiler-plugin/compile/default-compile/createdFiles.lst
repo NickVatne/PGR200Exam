@@ -1,0 +1,7 @@
+com/kristiania/pgr200/database/entity/Task.class
+com/kristiania/pgr200/database/dao/TaskManagerDao.class
+com/kristiania/pgr200/database/entity/TaskManager.class
+com/kristiania/pgr200/database/DatabaseHandler/DatabaseHandler.class
+com/kristiania/pgr200/database/dao/TaskDao.class
+com/kristiania/pgr200/database/dao/ResultSetMapper.class
+com/kristiania/pgr200/database/dao/AbstractDao.class

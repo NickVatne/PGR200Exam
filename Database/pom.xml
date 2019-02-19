@@ -23,10 +23,16 @@
         </plugins>
     </build>
     <dependencies>
+
         <dependency>
-            <groupId>no.kristiania.pgr200</groupId>
-            <artifactId>Database-exam-core</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>42.2.5</version>
+        </dependency>
+        <dependency>
+            <groupId>org.flywaydb</groupId>
+            <artifactId>flyway-core</artifactId>
+            <version>5.2.0</version>
         </dependency>
     </dependencies>
 
