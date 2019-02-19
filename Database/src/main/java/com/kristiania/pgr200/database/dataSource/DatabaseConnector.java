@@ -41,7 +41,7 @@ public class DatabaseConnector {
 
         Flyway flyway = new Flyway();
         flyway.setDataSource(dataSource);
-        flyway.migrate();
+        flyway.baseline();
 
         System.out.println("Database Connected Successfully");
 

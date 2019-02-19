@@ -27,31 +27,32 @@ public class Client {
     private Client() throws IOException, SQLException {
         dh = new DatabaseHandler();
         int stopProgram = 0;
-        int menu = 42;
+        int menu = 9;
         Scanner scanner = new Scanner(System.in);
 
         while (stopProgram < 1) {
-            if (menu == 42) {
+            if (menu == 9) {
                 System.out.println();
-                System.out.println("<-----MENY----->");
-                System.out.println("[42] Vis meny");
-                System.out.println("[1] List alle Foredrag");
-                System.out.println("[2] Legg til Foredrag");
-                System.out.println("[3] Oppdater Foredrag");
-                System.out.println("[4] Avslutt programm");
-                System.out.print("Tast inn ditt valg: ");
+                System.out.println("Hello and Welcome to ProjectViewer");
+                System.out.println("In this program you will be able to check the: ");
+                System.out.println("(1) Name of the different Projects currently in Progress");
+                System.out.println("(2) Create your own project");
+                System.out.println("(3) Look at the differnt projects participants");
+                System.out.println("(4) Change Tasks");
+                System.out.println("(5) Exit Program");
+                System.out.print("What do you want to do? ( 1 - 5): ");
             } else if (menu == 1) {
                 //list All Talks
                 System.out.println();
-                System.out.println("----VISER ALLE FOREDRAG----");
+                System.out.println("----Listing all Projects----");
                 HttpResponse response = new HttpRequest("GET", "localhost", 0, "db/task").execute();
                 System.out.println(response.getBody());
-                System.out.println(("(trykk 42 for å se meny)"));
+                System.out.println(("(Press 9 to go back to Main Menu)"));
 
 
             } else if (menu == 2) {
                 System.out.println();
-                System.out.println("----Registrer foredrag----");
+                System.out.println("----Create your own Project----");
 
                 //Insert Talk to database
                 talkParameters = createTalkParameters();
@@ -60,10 +61,10 @@ public class Client {
                 new HttpRequest("POST", "localhost", 12080, path).execute();
 
                 System.out.println();
-                System.out.println(("(trykk 42 for å se meny)"));
+                System.out.println(("(Press 9 to go back to Main Menu)"));
             } else if (menu == 3) {
                 System.out.println();
-                System.out.println("Hvilket foredrag vil du oppdatere?");
+                System.out.println("Listing all participants in the different projects");
                 response = new HttpRequest("GET", "localhost", 12080, "db/task").execute();
                 System.out.println();
                 System.out.println(response.getBody());
@@ -91,11 +92,14 @@ public class Client {
 
 
             } else if (menu == 4) {
+                System.out.println(" What project do you want to change? ");
+                System.out.println(("(Press 9 to go back to Main Menu)"));
+                System.out.println("");
+            } else if (menu == 5){
                 System.out.println();
-                System.out.println("----TAKK FOR NÅ!----");
+                System.out.println("Thank you for using ProjectViewer");
                 stopProgram = 1;
             }
-
             if (stopProgram != 1) {
                 menu = scanner.nextInt();
             }
