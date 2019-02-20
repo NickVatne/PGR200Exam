@@ -1,4 +1,39 @@
+
 ## PGR200 - Advanced Java Exam
+
+###Kjøreinstruksjoner
+
+#####Terminal/Cmd
+   
+- OBS! innlevering.properties ligger i PGR200Exam/Database/src/main/resources/innlevering.properties
+
+- Åpne terminalen og naviger deg til prosjektmappen
+
+- Kjør mvn clean install i prosjektmappen
+
+- Kjør mvn package
+
+- Naviger deg til http/target-mappen
+
+- Skriv inn java -cp com.kristiania.pgr.http-0.0.1.jar com.kristiania.pgr200.http.HttpServer
+
+- Åpne nytt terminal/cmd vindu
+
+- Vaviger til cli/target mappe
+
+- Skriv inn java -cp com.kristiania.pgr200.client-0.0.1.jar com.kristiania.pgr200.client.Client
+
+#####IDE
+
+- Kjør /PGR200Exam/HTTP/src/main/java/com/kristiania/pgr200/http/HttpServer.java
+
+- Kjør /PGR200Exam/Client/src/main/java/com/kristiania/pgr200/client/Client.java
+
+- Følg meny-valg i client-terminalvindu.
+
+------------------------------------------------------------------------------------------------------------
+
+
 ![Screenshot](https://travis-ci.com/NickVatne/PGR200Exam.svg?branch=master)
 
 ------------------------------------------------------------------------------------------------------------
@@ -8,7 +43,7 @@
 ![Database](documentation/DBSCHEMA.png)
 
 ------------------------------------------------------------------------------------------------------------
-## Programkrav / Egenvurdering
+### Programkrav / Egenvurdering
 - Programmet er bygget på en Maven Arkitektur med pgr200exam som root, med undermoduler kalt HTTP, Database og Client med tilhørende POM filer.
 - Programmet bygger på TravisCI 
 - Programmet er bygget på å kommunisere med GET og POST requests.
@@ -50,7 +85,7 @@ HTTP/SERVER
 ANNET
 - Demonstrere bruk av Github og Travis-CI
 - README.md-fil som inneholder:
-  - Fullstendig brukerveiledning
+  - Kjøreinstruksjoner
   - Egenvurdering
   - Kort designbeskrivelse
   - Diagram med beskrivelse av programfunksjonalitet

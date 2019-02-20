@@ -11,7 +11,6 @@ public class TestDataSource {
 
         @Test
         public void shouldReturnCorrectTestUser() throws SQLException {
-
             DataSource dataSource = new DataSourceTest().createDataSource();
             assertThat(dataSource.getConnection().getMetaData().getUserName()).isEqualTo("SA");
             assertThat(dataSource.getConnection().getMetaData().getURL()).isEqualTo("jdbc:h2:mem:test");
