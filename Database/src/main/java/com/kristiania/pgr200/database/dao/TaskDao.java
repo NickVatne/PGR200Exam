@@ -98,13 +98,13 @@ public class TaskDao extends AbstractDao {
         addToStatement(id, status, sqlUpdateStatus);
     }
     public void updateFirstU(int id, String firstUser) throws SQLException{
-        addToStatement(id, firstUser, sqlUpdateStatus);
+        addToStatement(id, firstUser, sqlUpdateFirstU);
     }
     public void updateSecondU(int id, String secondUser) throws SQLException{
-        addToStatement(id, secondUser, sqlUpdateStatus);
+        addToStatement(id, secondUser, sqlUpdateSecondU);
     }
     public void updateThirdU(int id, String thirdUser) throws SQLException{
-        addToStatement(id, thirdUser, sqlUpdateStatus);
+        addToStatement(id, thirdUser, sqlUpdateThirdU);
     }
 
 
