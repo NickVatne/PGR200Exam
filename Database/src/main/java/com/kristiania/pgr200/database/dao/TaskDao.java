@@ -13,7 +13,6 @@ import java.util.List;
 
 public class TaskDao extends AbstractDao {
 
-<<<<<<< HEAD
     private String updateSQL = "INSERT INTO TASK (TITLE, DESCRIPTION, STATUS, FIRST_USER, SECOND_USER, THIRD_USER) VALUES (?,?,?,?,?,?)";
     private String sqlUpdateTitle = "UPDATE TASK SET TITLE = ? WHERE ID = ?";
     private String sqlUpdateDesc = "UPDATE TASK SET DESCRIPTION = ? WHERE ID = ?";
@@ -22,13 +21,7 @@ public class TaskDao extends AbstractDao {
     private String sqlUpdateSecondU = "UPDATE TASK SET SECOND_USER = ? WHERE ID = ?";
     private String sqlUpdateThirdU = "UPDATE TASK SET THIRD_USER = ? WHERE ID = ?";
     private String sqlGetAll = "SELECT * FROM TASK";
-=======
-    private String updateSQL = "INSERT INTO task (TITLE, DESCRIPTION, STATUS) VALUES (?,?,?)";
-    private String sqlUpdateTitle = "UPDATE TASK SET TITLE = ? WHERE ID = ?";
-    private String sqlUpdateDesc = "UPDATE TASK SET DESCRIPTION = ? WHERE ID = ?";
-    private String sqlUpdateStatus = "UPDATE TASK SET STATUS = ? WHERE ID = ?";
-    private String sqlGetAll = "SELECT ta.title, ta.description, ta.status, tm.first_user, tm.second_user, tm.third_user FROM TASK as ta, TASKMANAGER as tm ";
->>>>>>> 9546bec5f394756dd6310fd1a918b19718d46709
+
 
     public TaskDao(DataSource dataSource){
         super(dataSource);
