@@ -131,9 +131,19 @@ public class HttpServer {
         if (baseUrl.equals("/db/task/desc")) {
             new DatabaseHandler().updateTaskDesc(parameters);
         }
-        if (baseUrl.equals("/db/task/topic")) {
+        if (baseUrl.equals("/db/task/status")) {
             new DatabaseHandler().updateTaskStatus(parameters);
         }
+        if (baseUrl.equals("/db/task/first_user")) {
+            new DatabaseHandler().updateTaskFirstU(parameters);
+        }
+        if (baseUrl.equals("/db/task/second_user")) {
+            new DatabaseHandler().updateTaskSecondU(parameters);
+        }
+        if (baseUrl.equals("/db/task/third_user")) {
+            new DatabaseHandler().updateTaskThirdU(parameters);
+        }
+
 
     }
 

@@ -34,12 +34,11 @@ public class Client {
                 System.out.println();
                 System.out.println("Hello and Welcome to ProjectViewer");
                 System.out.println("In this program you will be able to check the: ");
-                System.out.println("(1) Name of the different Projects currently in Progress");
+                System.out.println("(1) List all currently available tasks");
                 System.out.println("(2) Create your own project");
-                System.out.println("(3) Look at the different projects participants");
-                System.out.println("(4) Change Tasks");
-                System.out.println("(5) Exit Program");
-                System.out.print("What do you want to do? ( 1 - 5): ");
+                System.out.println("(3) Update tasks");
+                System.out.println("(4) Exit Program");
+                System.out.print("What do you want to do? (1 - 4): ");
             } else if (menu == 1) {
                 //list All Talks
                 System.out.println();
@@ -76,6 +75,9 @@ public class Client {
                 String pathTitle = HttpRequest.createPath("/db/task/title", updateTaskParameters);
                 String pathDesc = HttpRequest.createPath("/db/task/desc", updateTaskParameters);
                 String pathStatus = HttpRequest.createPath("/db/task/status", updateTaskParameters);
+                String pathFirstU = HttpRequest.createPath("/db/task/first_user", updateTaskParameters);
+                String pathSecondU = HttpRequest.createPath("/db/task/second_user", updateTaskParameters);
+                String pathThirdU = HttpRequest.createPath("/db/task/third_user", updateTaskParameters);
                 //Update Desc of talk to database
 
                 if (updateTaskParameters.containsKey("title")) {
@@ -89,13 +91,20 @@ public class Client {
                     new HttpRequest("PUT", "localhost", 12080, pathStatus).execute();
 
                 }
+                if (updateTaskParameters.containsKey("first_user")) {
+                    new HttpRequest("PUT", "localhost", 12080, pathFirstU).execute();
+                }
+                if (updateTaskParameters.containsKey("second_user")) {
+                    new HttpRequest("PUT", "localhost", 12080, pathSecondU).execute();
+
+                }
+                if (updateTaskParameters.containsKey("third_user")) {
+                    new HttpRequest("PUT", "localhost", 12080, pathThirdU).execute();
+
+                }
 
 
-            } else if (menu == 4) {
-                System.out.println(" What project do you want to change? ");
-                System.out.println(("(Press 9 to go back to Main Menu)"));
-                System.out.println("");
-            } else if (menu == 5) {
+            }  else if (menu == 4) {
                 System.out.println();
                 System.out.println("Thank you for using ProjectViewer");
                 stopProgram = 1;
@@ -137,10 +146,37 @@ public class Client {
             return parameters;
 
         } else if (inputChoice.equalsIgnoreCase("status")) {
-            System.out.print("Ny status: ");
-            String newDesc = input.nextLine();
-            parameters.put("status", newDesc);
+            System.out.print("New status: ");
+            String newStatus = input.nextLine();
+            parameters.put("status", newStatus);
             System.out.println("Status updated - press 9 to go back to the menu");
+
+
+            return parameters;
+
+        } else if (inputChoice.equalsIgnoreCase("first_user")) {
+            System.out.print("New first user: ");
+            String newFirstU = input.nextLine();
+            parameters.put("first_user", newFirstU);
+            System.out.println("First user updated - press 9 to go back to the menu");
+
+
+            return parameters;
+
+        } else if (inputChoice.equalsIgnoreCase("second_user")) {
+            System.out.print("New second user: ");
+            String newSecondU = input.nextLine();
+            parameters.put("second_user", newSecondU);
+            System.out.println("Second user updated - press 9 to go back to the menu");
+
+
+            return parameters;
+
+        } else if (inputChoice.equalsIgnoreCase("third_user")) {
+            System.out.print("New third user: ");
+            String newThirdU = input.nextLine();
+            parameters.put("third_user", newThirdU);
+            System.out.println("Third user updated - press 9 to go back to the menu");
 
 
             return parameters;

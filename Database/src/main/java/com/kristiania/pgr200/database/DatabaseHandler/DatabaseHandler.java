@@ -1,11 +1,9 @@
 package com.kristiania.pgr200.database.DatabaseHandler;
 
 import com.kristiania.pgr200.database.dao.TaskDao;
-import com.kristiania.pgr200.database.dao.TaskManagerDao;
 import com.kristiania.pgr200.database.dataSource.DatabaseConnector;
 import com.kristiania.pgr200.database.entity.ProjectFormatted;
 import com.kristiania.pgr200.database.entity.Task;
-import com.kristiania.pgr200.database.entity.TaskManager;
 
 import javax.sql.DataSource;
 import java.sql.SQLException;
@@ -20,7 +18,6 @@ public class DatabaseHandler {
 
     //  DAO Inserts
     TaskDao taskDao = new TaskDao(projectDb);
-    TaskManagerDao taskManagerDao = new TaskManagerDao(projectDb);
 
     public DatabaseHandler() throws SQLException {
     }
@@ -32,7 +29,7 @@ public class DatabaseHandler {
             System.out.println("There is no Projects, Please Add One");
         }
         StringBuilder response = new StringBuilder();
-        response.append(ProjectFormatted.createHeaderLine());
+        //response.append(ProjectFormatted.createHeaderLine());
         for (ProjectFormatted project : tasks) {
             response.append(project.formatOutput());
         }
@@ -41,27 +38,22 @@ public class DatabaseHandler {
 
     public void insertProject(Map<String, String> parameters) throws SQLException {
         Task tempTask = new Task();
-        TaskManager tempTM = new TaskManager();
 
         String title = parameters.get("title");
         String desc = parameters.get("description");
         String status = parameters.get("status");
-
-        String taskmanager = parameters.get("first_user");
-        String taskmanager2 = parameters.get("second_user");
-        String taskmanager3 = parameters.get("third_user");
-
+        String firstUser = parameters.get("first_user");
+        String secondUser = parameters.get("second_user");
+        String thirdUser = parameters.get("third_user");
 
         tempTask.setTitle(title);
         tempTask.setDescription(desc);
         tempTask.setStatus(status);
-
-        tempTM.setFirstUser(taskmanager);
-        tempTM.setSecondUser(taskmanager2);
-        tempTM.setThirdUser(taskmanager3);
+        tempTask.setFirstUser(firstUser);
+        tempTask.setSecondUser(secondUser);
+        tempTask.setThirdUser(thirdUser);
 
         taskDao.save(tempTask);
-        taskManagerDao.save(tempTM);
 
     }
 
@@ -86,13 +78,29 @@ public class DatabaseHandler {
         taskDao.updateStatus(id, status);
     }
 
+    public void updateTaskFirstU(Map<String, String> parameteres) throws SQLException {
+        int id = Integer.parseInt(parameteres.get("id"));
+        String firstUser = parameteres.get("first_user");
+
+        taskDao.updateFirstU(id, firstUser);
+    }
+
+    public void updateTaskSecondU(Map<String, String> parameteres) throws SQLException {
+        int id = Integer.parseInt(parameteres.get("id"));
+        String secondUser = parameteres.get("second_user");
+
+        taskDao.updateSecondU(id, secondUser);
+    }
+
+    public void updateTaskThirdU(Map<String, String> parameteres) throws SQLException {
+        int id = Integer.parseInt(parameteres.get("id"));
+        String thirdUser = parameteres.get("first_user");
+
+        taskDao.updateThirdU(id, thirdUser);
+    }
+
     public List<Task> getAllAvailableTasks() throws SQLException {
         return taskDao.getAll();
     }
-
-    public List<TaskManager> getAllAvailableTaskManagers() throws SQLException {
-        return taskManagerDao.getAll();
-    }
-
 }
 

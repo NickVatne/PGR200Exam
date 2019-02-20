@@ -13,10 +13,13 @@ import java.util.List;
 
 public class TaskDao extends AbstractDao {
 
-    private String updateSQL = "INSERT INTO TASK (TITLE, DESCRIPTION, STATUS) VALUES (?,?,?)";
+    private String updateSQL = "INSERT INTO TASK (TITLE, DESCRIPTION, STATUS, FIRST_USER, SECOND_USER, THIRD_USER) VALUES (?,?,?,?,?,?)";
     private String sqlUpdateTitle = "UPDATE TASK SET TITLE = ? WHERE ID = ?";
     private String sqlUpdateDesc = "UPDATE TASK SET DESCRIPTION = ? WHERE ID = ?";
     private String sqlUpdateStatus = "UPDATE TASK SET STATUS = ? WHERE ID = ?";
+    private String sqlUpdateFirstU = "UPDATE TASK SET FIRST_USER = ? WHERE ID = ?";
+    private String sqlUpdateSecondU = "UPDATE TASK SET SECOND_USER = ? WHERE ID = ?";
+    private String sqlUpdateThirdU = "UPDATE TASK SET THIRD_USER = ? WHERE ID = ?";
     private String sqlGetAll = "SELECT * FROM TASK";
 
     public TaskDao(DataSource dataSource){
@@ -26,6 +29,7 @@ public class TaskDao extends AbstractDao {
     public List<Task> getAll() throws SQLException {
         return list(sqlGetAll, this::mapToTask);
     }
+
     public void save(Task task) throws SQLException {
 
         try (Connection connection = dataSource.getConnection()){
@@ -33,6 +37,9 @@ public class TaskDao extends AbstractDao {
                 statement.setString(1, task.getTitle());
                 statement.setString(2, task.getDescription());
                 statement.setString(3, task.getStatus());
+                statement.setString(4, task.getFirstUser());
+                statement.setString(5, task.getSecondUser());
+                statement.setString(6, task.getThirdUser());
                 statement.executeUpdate();
 
                 try (ResultSet resultSet = statement.getGeneratedKeys()){
@@ -59,8 +66,7 @@ public class TaskDao extends AbstractDao {
         }
     }
     public List<ProjectFormatted> getAllProjectsFormatted() throws SQLException {
-        String sql = "SELECT ta.id, ta title, ta.description, ta.status, tm.first_user, tm.second_user, tm.third_user FROM task ta"
-                + " INNER JOIN taskmanager tm on (tm.id = ta.taskmanager_id)";
+        String sql = "SELECT id, title, description, status, first_user, second_user, third_user FROM task";
         try (Connection conn = dataSource.getConnection()) {
             try (PreparedStatement statement = conn.prepareStatement(sql)) {
                 try (ResultSet rs = statement.executeQuery()) {
@@ -90,5 +96,17 @@ public class TaskDao extends AbstractDao {
     public void updateStatus(int id, String status) throws SQLException{
         addToStatement(id, status, sqlUpdateStatus);
     }
+    public void updateFirstU(int id, String firstUser) throws SQLException{
+        addToStatement(id, firstUser, sqlUpdateStatus);
+    }
+    public void updateSecondU(int id, String secondUser) throws SQLException{
+        addToStatement(id, secondUser, sqlUpdateStatus);
+    }
+    public void updateThirdU(int id, String thirdUser) throws SQLException{
+        addToStatement(id, thirdUser, sqlUpdateStatus);
+    }
+
+
+
 
 }

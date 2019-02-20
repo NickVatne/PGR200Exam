@@ -1,17 +1,19 @@
 package com.kristiania.pgr200.database.entity;
 
 public class Task {
-    int id , timemanagerId;
-    String title, description, status;
+    int id;
+    String title, description, status, firstUser, secondUser, thirdUser;
 
     public Task() {
     }
 
-    public Task(String title, String description, String status, int timemanagerId) {
+    public Task(String title, String description, String status, String firstUser, String secondUser, String thirdUser) {
         this.title = title;
         this.description = description;
         this.status = status;
-        this.timemanagerId = timemanagerId;
+        this.firstUser = firstUser;
+        this.secondUser = secondUser;
+        this.thirdUser = thirdUser;
     }
 
     public int getId() {
@@ -46,11 +48,26 @@ public class Task {
         this.status = status;
     }
 
-    public int getTimemanagerId() {
-        return timemanagerId;
+    public String getFirstUser() {
+        return firstUser;
     }
 
-    public void setTimemanagerId(int timemanagerId) {
-        this.timemanagerId = timemanagerId;
+    public void setFirstUser(String firstUser) {
+        this.firstUser = firstUser;
+    }
+
+    public String getSecondUser() {
+        return secondUser;
+    }
+
+    public void setSecondUser(String secondUser) {
+        this.secondUser = secondUser;
+    }
+
+    public String getThirdUser() {
+        return thirdUser;
+    }
+    public void setThirdUser(String thirdUser) {
+        this.thirdUser = thirdUser;
     }
 }

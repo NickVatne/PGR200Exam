@@ -1,7 +1,6 @@
 package com.kristiania.pgr200.database.entity;
 
 public class ProjectFormatted {
-    private static final String COLUMNFORMAT = "%-3s %-40s %-100s %-8s %-15s %-15s %-15s\n";
     int id;
     String title, description, status, first_user, second_user, third_user;
 
@@ -43,10 +42,8 @@ public class ProjectFormatted {
         return third_user;
     }
 
-    public static String createHeaderLine(){
-        return String.format(COLUMNFORMAT, "|ID|", "|TITLE|", "|DESCRIPTION|", "|STATUS|", "|FIRST_USER|", "|SECOND_USER|", "|THIRD_USER|");
-    }
     public String formatOutput(){
-        return String.format(COLUMNFORMAT, id, title, description, status, first_user, second_user, third_user);
+        String output = "\n ID: "+id + "\n Task: "+title+"\n Description: "+ description + "\n Project Status: "+ status + "\n Participants: " + first_user +  ", " + second_user + ", " + third_user+ "\n";
+        return output;
     }
 }
