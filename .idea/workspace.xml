@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="74ef0025-38ba-417a-b6ae-3b92f5d12962" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Database/src/main/java/com/kristiania/pgr200/database/dao/TaskDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/Database/src/main/java/com/kristiania/pgr200/database/dao/TaskDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Database/src/main/java/com/kristiania/pgr200/database/entity/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/Database/src/main/java/com/kristiania/pgr200/database/entity/Task.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTTP/src/main/java/com/kristiania/pgr200/http/HttpServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/HTTP/src/main/java/com/kristiania/pgr200/http/HttpServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documentation/DBSCHEMA.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -140,8 +139,8 @@
       <file leaf-file-name="HttpServer.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/HTTP/src/main/java/com/kristiania/pgr200/http/HttpServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="206">
-              <caret line="58" selection-start-line="58" selection-end-line="58" />
+            <state relative-caret-position="211">
+              <caret line="24" selection-start-line="24" selection-end-line="24" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -647,7 +646,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39756000" />
+    <option name="totallyTimeSpent" value="40032000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -660,7 +659,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="25" y="23" width="1813" height="1110" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
@@ -682,7 +680,7 @@
       <window_info id="Image Layers" order="3" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="bottom" id="Flutter Performance" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32872656" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32872656" />
       <window_info anchor="bottom" id="Version Control" order="12" weight="0.32925472" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32872656" />
       <window_info anchor="bottom" id="Database Console" order="15" weight="0.32872656" />
@@ -1089,8 +1087,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/HTTP/src/main/java/com/kristiania/pgr200/http/HttpServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="58" selection-start-line="58" selection-end-line="58" />
+        <state relative-caret-position="211">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1114,7 +1112,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited />
+          <last-edited>No facets are configured</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1174,7 +1172,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited />
+          <last-edited>Maven: com.h2database:h2:1.4.197</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
