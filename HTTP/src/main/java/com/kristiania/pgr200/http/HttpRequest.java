@@ -17,9 +17,7 @@ public class HttpRequest {
     private Socket socket;
     private OutputStream outputStream;
     private Map<String, String> headers = new HashMap<>();
-
     private String body;
-
 
     public HttpRequest(String method, String hostname, int port, String path) throws IOException {
         setRequestHeader("Host", hostname);
@@ -50,14 +48,12 @@ public class HttpRequest {
 
     public void setRequestHeader(String rule, String type) {
         this.headers.put(rule, type);
-
     }
 
     public static String createPath(String baseURL, Map<String, String> talkParameters) {
         if (talkParameters.isEmpty()) {
             return baseURL;
         }
-
         StringBuilder sb = new StringBuilder();
         sb.append(baseURL);
         sb.append("?");
@@ -66,7 +62,6 @@ public class HttpRequest {
             keyValueStrings.add(urlEncode(entry.getKey()) + "=" + urlEncode(entry.getValue()));
         }
         sb.append(String.join("&", keyValueStrings));
-
         return sb.toString();
     }
 

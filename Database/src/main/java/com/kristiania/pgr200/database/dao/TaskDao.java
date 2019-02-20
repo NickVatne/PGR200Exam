@@ -22,7 +22,6 @@ public class TaskDao extends AbstractDao {
     private String sqlUpdateThirdU = "UPDATE TASK SET THIRD_USER = ? WHERE ID = ?";
     private String sqlGetAll = "SELECT * FROM TASK";
 
-
     public TaskDao(DataSource dataSource){
         super(dataSource);
     }
@@ -32,7 +31,6 @@ public class TaskDao extends AbstractDao {
     }
 
     public void save(Task task) throws SQLException {
-
         try (Connection connection = dataSource.getConnection()){
             try (PreparedStatement statement = connection.prepareStatement(updateSQL, PreparedStatement.RETURN_GENERATED_KEYS)){
                 statement.setString(1, task.getTitle());
@@ -50,13 +48,14 @@ public class TaskDao extends AbstractDao {
             }
         }
     }
+
     private Task mapToTask(ResultSet rs) throws SQLException{
         Task task = new Task();
         task.setId(rs.getInt("id"));
         task.setTitle(rs.getString("title"));
-
         return task;
     }
+
     private void addToStatement(int id, String task, String sqlUpdate) throws SQLException{
         try (Connection connection = dataSource.getConnection()){
             try(PreparedStatement statement = connection.prepareStatement(sqlUpdate)) {
@@ -66,6 +65,7 @@ public class TaskDao extends AbstractDao {
             }
         }
     }
+
     public List<ProjectFormatted> getAllProjectsFormatted() throws SQLException {
         String sql = "SELECT id, title, description, status, first_user, second_user, third_user FROM task";
         try (Connection conn = dataSource.getConnection()) {

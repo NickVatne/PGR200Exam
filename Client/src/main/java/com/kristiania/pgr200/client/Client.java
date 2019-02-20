@@ -39,20 +39,17 @@ public class Client {
                 System.out.println("(3) Update tasks");
                 System.out.println("(4) Exit Program");
                 System.out.print("What do you want to do? (1 - 4): ");
+
             } else if (menu == 1) {
-                //list All Talks
                 System.out.println();
                 System.out.println("----Listing all Projects----");
                 HttpResponse response = new HttpRequest("GET", "localhost", 12080, "db/task").execute();
                 System.out.println(response.getBody());
                 System.out.println(("(Press 9 to go back to Main Menu)"));
 
-
             } else if (menu == 2) {
                 System.out.println();
                 System.out.println("----Create your own Project----");
-
-                //Insert Talk to database
                 taskParameters = createTaskParameters();
                 String path = HttpRequest.createPath("/db/task", taskParameters);
 
@@ -68,9 +65,7 @@ public class Client {
                 System.out.println();
                 System.out.println(response.getBody());
 
-                //Update Title of talk to database
                 updateTaskParameters = updateTaskParameters();
-
 
                 String pathTitle = HttpRequest.createPath("/db/task/title", updateTaskParameters);
                 String pathDesc = HttpRequest.createPath("/db/task/desc", updateTaskParameters);
@@ -78,31 +73,25 @@ public class Client {
                 String pathFirstU = HttpRequest.createPath("/db/task/first_user", updateTaskParameters);
                 String pathSecondU = HttpRequest.createPath("/db/task/second_user", updateTaskParameters);
                 String pathThirdU = HttpRequest.createPath("/db/task/third_user", updateTaskParameters);
-                //Update Desc of talk to database
 
                 if (updateTaskParameters.containsKey("title")) {
                     new HttpRequest("PUT", "localhost", 12080, pathTitle).execute();
                 }
                 if (updateTaskParameters.containsKey("desc")) {
                     new HttpRequest("PUT", "localhost", 12080, pathDesc).execute();
-
                 }
                 if (updateTaskParameters.containsKey("status")) {
                     new HttpRequest("PUT", "localhost", 12080, pathStatus).execute();
-
                 }
                 if (updateTaskParameters.containsKey("first_user")) {
                     new HttpRequest("PUT", "localhost", 12080, pathFirstU).execute();
                 }
                 if (updateTaskParameters.containsKey("second_user")) {
                     new HttpRequest("PUT", "localhost", 12080, pathSecondU).execute();
-
                 }
                 if (updateTaskParameters.containsKey("third_user")) {
                     new HttpRequest("PUT", "localhost", 12080, pathThirdU).execute();
-
                 }
-
 
             }  else if (menu == 4) {
                 System.out.println();
@@ -117,16 +106,14 @@ public class Client {
 
     public Map<String, String> updateTaskParameters() throws SQLException {
         Map<String, String> parameters = new HashMap<>();
-
         Scanner input = new Scanner(System.in);
-
         List<Task> allAvailableTasks = dh.getAllAvailableTasks();
 
         System.out.print("Chose the ID of the task you wish to update: ");
         parameters.put("id", selectTask(input, allAvailableTasks));
         System.out.println();
         System.out.println("Do you wish to update the title, description, status, first_user, second_user or third_user?");
-        System.out.print("Enter here: ");
+        System.out.print("Enter what you wish to change: ");
 
         String inputChoice = input.nextLine();
 
@@ -137,6 +124,7 @@ public class Client {
             System.out.println("Title updated - press 9 to go back to the menu");
 
             return parameters;
+
         } else if (inputChoice.equalsIgnoreCase("description")) {
             System.out.print("New description: ");
             String newDesc = input.nextLine();
@@ -151,7 +139,6 @@ public class Client {
             parameters.put("status", newStatus);
             System.out.println("Status updated - press 9 to go back to the menu");
 
-
             return parameters;
 
         } else if (inputChoice.equalsIgnoreCase("first_user")) {
@@ -159,7 +146,6 @@ public class Client {
             String newFirstU = input.nextLine();
             parameters.put("first_user", newFirstU);
             System.out.println("First user updated - press 9 to go back to the menu");
-
 
             return parameters;
 
@@ -169,7 +155,6 @@ public class Client {
             parameters.put("second_user", newSecondU);
             System.out.println("Second user updated - press 9 to go back to the menu");
 
-
             return parameters;
 
         } else if (inputChoice.equalsIgnoreCase("third_user")) {
@@ -177,7 +162,6 @@ public class Client {
             String newThirdU = input.nextLine();
             parameters.put("third_user", newThirdU);
             System.out.println("Third user updated - press 9 to go back to the menu");
-
 
             return parameters;
         }
@@ -220,7 +204,6 @@ public class Client {
     }
 
     private String selectTask(Scanner input, List<Task> allAvailableTalks) {
-
         String selectedTalk = input.nextLine();
         String taskId = findTalkId(allAvailableTalks, selectedTalk);
         if (taskId == null) {
@@ -229,5 +212,4 @@ public class Client {
         }
         return taskId;
     }
-
 }

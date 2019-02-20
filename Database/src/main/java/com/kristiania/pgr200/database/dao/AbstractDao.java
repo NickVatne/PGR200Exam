@@ -12,7 +12,6 @@ import java.util.List;
 public abstract class AbstractDao {
 
     protected final DataSource dataSource;
-
     public AbstractDao(DataSource dataSource) {
         this.dataSource = dataSource;
     }
@@ -31,7 +30,6 @@ public abstract class AbstractDao {
         }
     }
 
-
     protected <T> T get(String sql, ResultSetMapper<T> mapper, int id) throws SQLException {
         try (Connection conn = dataSource.getConnection()) {
             try (PreparedStatement statement = conn.prepareStatement(sql + id)) {
@@ -41,7 +39,6 @@ public abstract class AbstractDao {
                     }
                 }
             }
-
             return null;
         }
     }

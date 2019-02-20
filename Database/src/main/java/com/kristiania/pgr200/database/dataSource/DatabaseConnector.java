@@ -15,7 +15,6 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Properties;
 
-
 public class DatabaseConnector {
     private Properties prop = new Properties();
     private InputStream inputStream = null;
@@ -62,6 +61,7 @@ public class DatabaseConnector {
 
         return dataSource;
     }
+
     private static DataSource createDataSource(Properties prop){
         PGPoolingDataSource dataSource = new PoolingDataSource();
         dataSource.setURL(prop.getProperty("dataSource.url"));
@@ -69,6 +69,7 @@ public class DatabaseConnector {
         dataSource.setPassword(prop.getProperty("dataSource.password"));
         return dataSource;
     }
+
     private static int executeConnection(DataSource data, String query) throws SQLException {
         return executeUpdate(data.getConnection(), query);
     }
@@ -87,9 +88,8 @@ public class DatabaseConnector {
             ignore.getErrorCode();
         }
         return r;
-
-
     }
+
     private static String readFile(String filePath) {
         try (FileInputStream is = new FileInputStream(new File(filePath))) {
             char[] charArray = new char[is.available()];

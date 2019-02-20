@@ -12,11 +12,9 @@ import java.util.Map;
 
 public class DatabaseHandler {
 
-    // Create Database Connection
     DatabaseConnector databaseConnector = new DatabaseConnector();
     DataSource projectDb = databaseConnector.connect();
 
-    //  DAO Inserts
     TaskDao taskDao = new TaskDao(projectDb);
 
     public DatabaseHandler() throws SQLException {
@@ -29,7 +27,6 @@ public class DatabaseHandler {
             System.out.println("There is no Projects, Please Add One");
         }
         StringBuilder response = new StringBuilder();
-        //response.append(ProjectFormatted.createHeaderLine());
         for (ProjectFormatted project : tasks) {
             response.append(project.formatOutput());
         }

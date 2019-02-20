@@ -14,34 +14,6 @@ public class ProjectFormatted {
         this.third_user = third_user;
     }
 
-    public int getId() {
-        return id;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public String getStatus() {
-        return status;
-    }
-
-    public String getFirst_user() {
-        return first_user;
-    }
-
-    public String getSecond_user() {
-        return second_user;
-    }
-
-    public String getThird_user() {
-        return third_user;
-    }
-
     public String formatOutput(){
         String output = "\n ID: "+id + "\n Task: "+title+"\n Description: "+ description + "\n Project Status: "+ status + "\n Participants: " + first_user +  ", " + second_user + ", " + third_user+ "\n";
         return output;

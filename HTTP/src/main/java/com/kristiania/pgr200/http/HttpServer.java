@@ -20,12 +20,10 @@ public class HttpServer {
     private String baseUrl;
     private Map<String, String> parameters = new HashMap<>();
 
-
     public HttpServer(int port) throws IOException {
         this.serverSocket = new ServerSocket(port);
         this.actualPort = serverSocket.getLocalPort();
     }
-
 
     public static void main(String[] args) throws IOException {
         HttpServer server = new HttpServer(12080);
@@ -34,7 +32,6 @@ public class HttpServer {
 
     private void start() {
         System.out.println("Waiting for the client!");
-
         new Thread(() -> {
             try {
                 runServer();
@@ -46,10 +43,8 @@ public class HttpServer {
     }
 
     public void runServer() throws SQLException {
-        // Establish database connection
         DatabaseConnector dbConnector = new DatabaseConnector();
         dbConnector.connect();
-
 
         while (true) {
             while (true) {
@@ -69,7 +64,6 @@ public class HttpServer {
                         System.out.println("No Request Method found");
                         return;
                     }
-
                     if (requestMethod == RequestType.GET) {
                         String body = doGet(path);
                         writeResponse(body, output);
@@ -82,7 +76,6 @@ public class HttpServer {
                         doPut(path);
                         writeResponse("updated", output);
                     }
-
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
@@ -114,7 +107,6 @@ public class HttpServer {
         if (baseUrl.equals("/db/task")) {
             new DatabaseHandler().insertProject(parameters);
         }
-
     }
 
     private void doPut(String path) throws SQLException {
@@ -140,8 +132,6 @@ public class HttpServer {
         if (baseUrl.equals("/db/task/third_user")) {
             new DatabaseHandler().updateTaskThirdU(parameters);
         }
-
-
     }
 
     private Map<String, String> getParameters(String path) {
@@ -158,7 +148,6 @@ public class HttpServer {
             paramName = parameter.substring(0, equalsPos);
             String paramValue = parameter.substring(equalsPos + 1);
             parameters.put(paramName, paramValue);
-
         }
         return parameters;
     }

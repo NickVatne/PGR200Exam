@@ -5,8 +5,4 @@ import java.sql.SQLException;
 
 @FunctionalInterface
 
-public interface ResultSetMapper<T> {
-
-    T mapResultSet(ResultSet rs) throws SQLException;
-
-}
+public interface ResultSetMapper<T> { T mapResultSet(ResultSet rs) throws SQLException; }

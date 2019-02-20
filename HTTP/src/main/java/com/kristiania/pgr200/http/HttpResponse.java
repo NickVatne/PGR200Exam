@@ -12,7 +12,6 @@ public class HttpResponse {
     private int statusCode;
     private Map<String, String> headers = new HashMap<>();
     private String body;
-
     private InputStream input;
 
     public HttpResponse(InputStream input) throws IOException {
@@ -26,7 +25,6 @@ public class HttpResponse {
 
     private void readHeaderLines() throws IOException {
         String headerLine;
-
         while ((headerLine = readLine(input)) != null) {
             if (headerLine.isEmpty()) {
                 break;
@@ -34,16 +32,13 @@ public class HttpResponse {
             int colonPos = headerLine.indexOf(':');
             String headerName = headerLine.substring(0, colonPos).trim().toLowerCase();
             String headerValue = headerLine.substring(colonPos + 1).trim();
-
             headers.put(headerName, headerValue);
         }
     }
 
     public static String readLine(InputStream input) throws IOException {
         StringBuilder line = new StringBuilder();
-
         int character;
-
         while ((character = input.read()) != -1) {
             if (character == '\r') {
                 character = input.read();
@@ -57,22 +52,17 @@ public class HttpResponse {
 
     private String readLine(InputStream input, int contentLength) throws IOException {
         StringBuilder line = new StringBuilder();
-
         int character;
-
         while ((character = input.read()) != -1) {
             line.append((char) character);
             if (line.length() >= contentLength) {
                 break;
             }
         }
-
         return line.toString();
     }
 
-
     public String getBody() {
-
         try {
             return URLDecoder.decode(body, "UTF-8");
         } catch (UnsupportedEncodingException e) {
@@ -85,7 +75,6 @@ public class HttpResponse {
     public String getHeader(String headerName) {
         return headers.get(headerName.toLowerCase());
     }
-
 
 }
 
