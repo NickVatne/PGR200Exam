@@ -1,3 +1,9 @@
+###KANDIDATNUMMER
+
+200005 | 200003
+
+------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------
 
 ## PGR200 - Advanced Java Exam
 
@@ -49,7 +55,7 @@
 - Programmet er bygget på å kommunisere med GET og POST requests.
 - Programmet anvender JUnit Test Library med
     - 8 tester representert i HTTP modulen
-    - X tester representert i Database modulen
+    - 5 tester representert i Database modulen
     - 0 tester representert i Client modulen
 - I modulen Database finnes innlevering.properties som anvender curl for å leses.
 - Grunnet begrenset tidsramme er databasen bygget på en enkel tabell, vi hadde derimot ønske om å anvende flere men grunnet en begrenset tidsramme var det ikke realistisk for oss å håndtere foreign keys, primary key forhold.
@@ -93,3 +99,4 @@ ANNET
   - Skrive tester i JUnit
 
 ------------------------------------------------------------------------------------------------------------
+TAKK FOR OSS
