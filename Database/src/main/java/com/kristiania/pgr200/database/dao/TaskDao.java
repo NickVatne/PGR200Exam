@@ -13,7 +13,7 @@ import java.util.List;
 
 public class TaskDao extends AbstractDao {
 
-    private String updateSQL = "INSERT INTO TASK (TITLE, DESCRIPTION, STATUS, TIMEMANAGER_ID) VALUES (?,?,?,?)";
+    private String updateSQL = "INSERT INTO TASK (TITLE, DESCRIPTION, STATUS) VALUES (?,?,?)";
     private String sqlUpdateTitle = "UPDATE TASK SET TITLE = ? WHERE ID = ?";
     private String sqlUpdateDesc = "UPDATE TASK SET DESCRIPTION = ? WHERE ID = ?";
     private String sqlUpdateStatus = "UPDATE TASK SET STATUS = ? WHERE ID = ?";
@@ -27,12 +27,12 @@ public class TaskDao extends AbstractDao {
         return list(sqlGetAll, this::mapToTask);
     }
     public void save(Task task) throws SQLException {
+
         try (Connection connection = dataSource.getConnection()){
             try (PreparedStatement statement = connection.prepareStatement(updateSQL, PreparedStatement.RETURN_GENERATED_KEYS)){
-                statement.setString(1,task.getTitle());
+                statement.setString(1, task.getTitle());
                 statement.setString(2, task.getDescription());
                 statement.setString(3, task.getStatus());
-                statement.setInt(4, task.getTimemanagerId());
                 statement.executeUpdate();
 
                 try (ResultSet resultSet = statement.getGeneratedKeys()){
@@ -45,7 +45,7 @@ public class TaskDao extends AbstractDao {
     private Task mapToTask(ResultSet rs) throws SQLException{
         Task task = new Task();
         task.setId(rs.getInt("ID"));
-        task.setTitle(rs.getString("TASK"));
+        task.setTitle(rs.getString("TITLE"));
 
         return task;
     }

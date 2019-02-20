@@ -1,7 +1,7 @@
 package com.kristiania.pgr200.database.entity;
 
 public class Task {
-    int id, timemanagerId;
+    int id , timemanagerId;
     String title, description, status;
 
     public Task() {

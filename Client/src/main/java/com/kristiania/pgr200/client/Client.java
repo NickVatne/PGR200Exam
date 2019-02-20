@@ -2,7 +2,6 @@ package com.kristiania.pgr200.client;
 
 import com.kristiania.pgr200.database.DatabaseHandler.DatabaseHandler;
 import com.kristiania.pgr200.database.entity.Task;
-import com.kristiania.pgr200.database.entity.TaskManager;
 import com.kristiania.pgr200.http.HttpRequest;
 import com.kristiania.pgr200.http.HttpResponse;
 
@@ -25,7 +24,7 @@ public class Client {
     }
 
     private Client() throws IOException, SQLException {
-        dh = new DatabaseHandler();
+        //dh = new DatabaseHandler();
         int stopProgram = 0;
         int menu = 9;
         Scanner scanner = new Scanner(System.in);
@@ -114,26 +113,26 @@ public class Client {
 
         List<Task> allAvailableTasks = dh.getAllAvailableTasks();
 
-        System.out.print("Velg ID på konferanse du vil oppdatere: ");
+        System.out.print("Chose the ID of the task you wish to update: ");
         parameters.put("id", selectTask(input, allAvailableTasks));
         System.out.println();
-        System.out.println("Vil du oppdatere tittel, beskrivelse eller status?");
-        System.out.print("Valg: ");
+        System.out.println("Do you wish to update the title, description, or status?");
+        System.out.print("Enter here: ");
 
         String inputChoice = input.nextLine();
 
-        if (inputChoice.equalsIgnoreCase("tittel")) {
-            System.out.print("Ny tittel: ");
+        if (inputChoice.equalsIgnoreCase("title")) {
+            System.out.print("New title: ");
             String newTitle = input.nextLine();
             parameters.put("title", newTitle);
-            System.out.println("Tittel oppdatert - trykk 42 for å se meny");
+            System.out.println("Title updated - press 9 to go back to the menu");
 
             return parameters;
-        } else if (inputChoice.equalsIgnoreCase("beskrivelse")) {
-            System.out.print("Ny beskrivelse: ");
+        } else if (inputChoice.equalsIgnoreCase("description")) {
+            System.out.print("New description: ");
             String newDesc = input.nextLine();
             parameters.put("desc", newDesc);
-            System.out.println("Beskrivelse oppdatert - trykk 42 for å se meny");
+            System.out.println("Description updated - press 9 to go back to the menu");
 
             return parameters;
 
@@ -141,7 +140,7 @@ public class Client {
             System.out.print("Ny status: ");
             String newDesc = input.nextLine();
             parameters.put("status", newDesc);
-            System.out.println("Beskrivelse oppdatert - trykk 42 for å se meny");
+            System.out.println("Status updated - press 9 to go back to the menu");
 
 
             return parameters;
@@ -172,8 +171,14 @@ public class Client {
         System.out.print("Add a Project Status ( Starting, Running, Finished, Delayed): ");
         parameters.put("status", input.nextLine());
 
-        List<TaskManager> allAvailableTM = dh.getAllAvailableTaskManagers();
-        parameters.put("time", selectTM(input, allAvailableTM));
+        System.out.println("Add Taskmanager - 1:");
+        parameters.put("first_user", input.nextLine());
+
+        System.out.println("Add Taskmanager - 2:");
+        parameters.put("second_user", input.nextLine());
+
+        System.out.println("Add Taskmanager - 3:");
+        parameters.put("third_user", input.nextLine());
 
         return parameters;
     }
@@ -183,34 +188,10 @@ public class Client {
         String selectedTalk = input.nextLine();
         String talkId = findTalkId(allAvailableTalks, selectedTalk);
         if (talkId == null) {
-            System.out.println("Fant ikke Foredrag, vennligst velg et foredrag fra listen");
+            System.out.println("Could not find the given task, please chose a task from the list.");
             selectTask(input, allAvailableTalks);
         }
         return talkId;
-    }
-
-    private String selectTM(Scanner input, List<TaskManager> allAvailableTM) {
-        System.out.print("Skriv kategori på konferansen: ");
-        System.out.println(allAvailableTM.toString());
-        System.out.println();
-        System.out.println("Kategori:");
-
-        String selectedTM = input.nextLine();
-        String topicId = findTMId(allAvailableTM, selectedTM);
-        if (topicId == null) {
-            System.out.println("Fant ikke kategori, vennligst velg tilgjengelig kategori");
-            selectTM(input, allAvailableTM);
-        }
-        return topicId;
-    }
-
-    private String findTMId(List<TaskManager> allAvailableTM, String selectedTM) {
-        for (TaskManager tm : allAvailableTM) {
-            if ((tm.getFirstUser().equalsIgnoreCase(selectedTM)) || (tm.getSecondUser().equalsIgnoreCase(selectedTM)) || (tm.getThirdUser().equalsIgnoreCase(selectedTM))) {
-                return tm.getId() + "";
-            }
-        }
-        return null;
     }
 
 }

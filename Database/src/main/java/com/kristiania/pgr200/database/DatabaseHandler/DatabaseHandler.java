@@ -41,23 +41,28 @@ public class DatabaseHandler {
 
     public void insertProject(Map<String, String> parameters) throws SQLException {
         Task tempTask = new Task();
+        TaskManager tempTM = new TaskManager();
 
-        String title = parameters.get("TITLE");
-        String desc = parameters.get("DESCRIPTION");
-        String status = parameters.get("STATUS");
-        int taskmanager = Integer.parseInt(parameters.get("FIRST_USER"));
-        int taskmanager2 = Integer.parseInt(parameters.get("SECOND_USER"));
-        int taskmanager3 = Integer.parseInt(parameters.get("THIRD_USER"));
+        String title = parameters.get("title");
+        String desc = parameters.get("description");
+        String status = parameters.get("status");
+
+        String taskmanager = parameters.get("first_user");
+        String taskmanager2 = parameters.get("second_user");
+        String taskmanager3 = parameters.get("third_user");
 
 
         tempTask.setTitle(title);
         tempTask.setDescription(desc);
         tempTask.setStatus(status);
-        tempTask.setTimemanagerId(taskmanager);
-        tempTask.setTimemanagerId(taskmanager2);
-        tempTask.setTimemanagerId(taskmanager3);
+
+        tempTM.setFirstUser(taskmanager);
+        tempTM.setSecondUser(taskmanager2);
+        tempTM.setThirdUser(taskmanager3);
 
         taskDao.save(tempTask);
+        taskManagerDao.save(tempTM);
+
     }
 
     public void updateTaskTitle(Map<String, String> parameters) throws SQLException {
