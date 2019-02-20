@@ -28,6 +28,15 @@ public class HttpRequest {
         outputStream = socket.getOutputStream();
     }
 
+    public HttpRequest(String hostname, int port, String path, String method) throws IOException {
+        setRequestHeader("Host", hostname);
+        this.path = path;
+        this.method = method;
+
+        socket = new Socket(hostname, port);
+        outputStream = socket.getOutputStream();
+    }
+
     public HttpResponse execute() throws IOException {
         writeLine(method + " " + path + " HTTP/1.1");
         writeLine("Connection: close");

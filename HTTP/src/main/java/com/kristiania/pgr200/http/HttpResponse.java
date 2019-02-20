@@ -75,6 +75,9 @@ public class HttpResponse {
     public String getHeader(String headerName) {
         return headers.get(headerName.toLowerCase());
     }
+    public int getStatusCode (){
+        return statusCode;
+    }
 
 }
 
