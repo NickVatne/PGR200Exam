@@ -94,7 +94,7 @@ public class DatabaseHandler {
 
     public void updateTaskThirdU(Map<String, String> parameteres) throws SQLException {
         int id = Integer.parseInt(parameteres.get("id"));
-        String thirdUser = parameteres.get("first_user");
+        String thirdUser = parameteres.get("third_user");
 
         taskDao.updateThirdU(id, thirdUser);
     }

@@ -24,7 +24,7 @@ public class Client {
     }
 
     private Client() throws IOException, SQLException {
-        //dh = new DatabaseHandler();
+        dh = new DatabaseHandler();
         int stopProgram = 0;
         int menu = 9;
         Scanner scanner = new Scanner(System.in);
@@ -125,7 +125,7 @@ public class Client {
         System.out.print("Chose the ID of the task you wish to update: ");
         parameters.put("id", selectTask(input, allAvailableTasks));
         System.out.println();
-        System.out.println("Do you wish to update the title, description, or status?");
+        System.out.println("Do you wish to update the title, description, status, first_user, second_user or third_user?");
         System.out.print("Enter here: ");
 
         String inputChoice = input.nextLine();
@@ -222,12 +222,12 @@ public class Client {
     private String selectTask(Scanner input, List<Task> allAvailableTalks) {
 
         String selectedTalk = input.nextLine();
-        String talkId = findTalkId(allAvailableTalks, selectedTalk);
-        if (talkId == null) {
+        String taskId = findTalkId(allAvailableTalks, selectedTalk);
+        if (taskId == null) {
             System.out.println("Could not find the given task, please chose a task from the list.");
             selectTask(input, allAvailableTalks);
         }
-        return talkId;
+        return taskId;
     }
 
 }
