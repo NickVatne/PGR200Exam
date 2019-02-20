@@ -67,6 +67,7 @@ public class Task {
     public String getThirdUser() {
         return thirdUser;
     }
+
     public void setThirdUser(String thirdUser) {
         this.thirdUser = thirdUser;
     }

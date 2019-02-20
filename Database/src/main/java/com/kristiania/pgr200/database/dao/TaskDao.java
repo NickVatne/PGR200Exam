@@ -57,10 +57,10 @@ public class TaskDao extends AbstractDao {
 
         return task;
     }
-    private void addToStatement(int id, String title, String sqlUpdateTitle) throws SQLException{
+    private void addToStatement(int id, String task, String sqlUpdate) throws SQLException{
         try (Connection connection = dataSource.getConnection()){
-            try(PreparedStatement statement = connection.prepareStatement(sqlUpdateTitle)) {
-                statement.setString(1, title);
+            try(PreparedStatement statement = connection.prepareStatement(sqlUpdate)) {
+                statement.setString(1, task);
                 statement.setLong(2,id);
                 statement.executeUpdate();
             }
@@ -89,7 +89,7 @@ public class TaskDao extends AbstractDao {
         }
     }
     public void updateTitle(int id, String title) throws SQLException {
-        addToStatement(id,title,sqlUpdateTitle);
+        addToStatement(id, title, sqlUpdateTitle);
     }
     public void updateDesc(int id, String desc) throws SQLException{
         addToStatement(id, desc, sqlUpdateDesc);
@@ -106,8 +106,4 @@ public class TaskDao extends AbstractDao {
     public void updateThirdU(int id, String thirdUser) throws SQLException{
         addToStatement(id, thirdUser, sqlUpdateThirdU);
     }
-
-
-
-
 }

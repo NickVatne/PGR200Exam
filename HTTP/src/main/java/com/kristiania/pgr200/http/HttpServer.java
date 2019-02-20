@@ -66,16 +66,13 @@ public class HttpServer {
 
                     RequestType requestMethod = RequestType.fromString(requestMethodString);
                     if (requestMethod == RequestType.UNKNOWN) {
-
                         System.out.println("No Request Method found");
                         return;
                     }
 
                     if (requestMethod == RequestType.GET) {
                         String body = doGet(path);
-
                         writeResponse(body, output);
-
                     }
                     if (requestMethod == RequestType.POST) {
                         doPost(path);
@@ -147,24 +144,17 @@ public class HttpServer {
 
     }
 
-
     private Map<String, String> getParameters(String path) {
         int questionPos = path.indexOf('?');
         if (questionPos == -1) {
             return new HashMap<>();
         }
-
-
         String query = urlDecode(path.substring(questionPos + 1));
-
-
         Map<String, String> parameters = new HashMap<>();
         assert query != null;
         for (String parameter : query.split("&")) {
             int equalsPos = parameter.indexOf('=');
-
             String paramName;
-
             paramName = parameter.substring(0, equalsPos);
             String paramValue = parameter.substring(equalsPos + 1);
             parameters.put(paramName, paramValue);
@@ -172,7 +162,6 @@ public class HttpServer {
         }
         return parameters;
     }
-
 
     private String urlDecode(String value) {
         try {
