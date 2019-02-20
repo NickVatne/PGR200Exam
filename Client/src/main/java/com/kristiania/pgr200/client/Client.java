@@ -16,8 +16,8 @@ import java.util.Scanner;
 public class Client {
 
     private DatabaseHandler dh;
-    Map<String, String> talkParameters;
-    Map<String, String> updateTalkParameters;
+    Map<String, String> taskParameters;
+    Map<String, String> updateTaskParameters;
     HttpResponse response;
 
     public static void main(String[] args) throws IOException, SQLException {
@@ -37,7 +37,7 @@ public class Client {
                 System.out.println("In this program you will be able to check the: ");
                 System.out.println("(1) Name of the different Projects currently in Progress");
                 System.out.println("(2) Create your own project");
-                System.out.println("(3) Look at the differnt projects participants");
+                System.out.println("(3) Look at the different projects participants");
                 System.out.println("(4) Change Tasks");
                 System.out.println("(5) Exit Program");
                 System.out.print("What do you want to do? ( 1 - 5): ");
@@ -55,13 +55,14 @@ public class Client {
                 System.out.println("----Create your own Project----");
 
                 //Insert Talk to database
-                talkParameters = createTalkParameters();
-                String path = HttpRequest.createPath("/db/task", talkParameters);
+                taskParameters = createTaskParameters();
+                String path = HttpRequest.createPath("/db/task", taskParameters);
 
                 new HttpRequest("POST", "localhost", 12080, path).execute();
 
                 System.out.println();
                 System.out.println(("(Press 9 to go back to Main Menu)"));
+
             } else if (menu == 3) {
                 System.out.println();
                 System.out.println("Listing all participants in the different projects");
@@ -70,22 +71,22 @@ public class Client {
                 System.out.println(response.getBody());
 
                 //Update Title of talk to database
-                updateTalkParameters = updateTalkParameters();
+                updateTaskParameters = updateTaskParameters();
 
 
-                String pathTitle = HttpRequest.createPath("/db/task/title", updateTalkParameters);
-                String pathDesc = HttpRequest.createPath("/db/task/desc", updateTalkParameters);
-                String pathStatus = HttpRequest.createPath("/db/task/status", updateTalkParameters);
+                String pathTitle = HttpRequest.createPath("/db/task/title", updateTaskParameters);
+                String pathDesc = HttpRequest.createPath("/db/task/desc", updateTaskParameters);
+                String pathStatus = HttpRequest.createPath("/db/task/status", updateTaskParameters);
                 //Update Desc of talk to database
 
-                if (updateTalkParameters.containsKey("title")) {
+                if (updateTaskParameters.containsKey("title")) {
                     new HttpRequest("PUT", "localhost", 12080, pathTitle).execute();
                 }
-                if (updateTalkParameters.containsKey("desc")) {
+                if (updateTaskParameters.containsKey("desc")) {
                     new HttpRequest("PUT", "localhost", 12080, pathDesc).execute();
 
                 }
-                if (updateTalkParameters.containsKey("status")) {
+                if (updateTaskParameters.containsKey("status")) {
                     new HttpRequest("PUT", "localhost", 12080, pathStatus).execute();
 
                 }
@@ -95,7 +96,7 @@ public class Client {
                 System.out.println(" What project do you want to change? ");
                 System.out.println(("(Press 9 to go back to Main Menu)"));
                 System.out.println("");
-            } else if (menu == 5){
+            } else if (menu == 5) {
                 System.out.println();
                 System.out.println("Thank you for using ProjectViewer");
                 stopProgram = 1;
@@ -106,7 +107,7 @@ public class Client {
         }
     }
 
-    public Map<String, String> updateTalkParameters() throws SQLException {
+    public Map<String, String> updateTaskParameters() throws SQLException {
         Map<String, String> parameters = new HashMap<>();
 
         Scanner input = new Scanner(System.in);
@@ -145,7 +146,7 @@ public class Client {
 
             return parameters;
         }
-        return updateTalkParameters();
+        return updateTaskParameters();
     }
 
     private String findTalkId(List<Task> allAvailableTalks, String selectedTalkId) {
@@ -158,17 +159,17 @@ public class Client {
         return null;
     }
 
-    private Map<String, String> createTalkParameters() throws SQLException {
+    private Map<String, String> createTaskParameters() throws SQLException {
         Map<String, String> parameters = new HashMap<>();
         Scanner input = new Scanner(System.in);
 
-        System.out.print("Legg til foredragtittel: ");
+        System.out.print("Add a Project Title: ");
         parameters.put("title", input.nextLine());
 
-        System.out.print("Legg til beskrivelse: ");
+        System.out.print("Add a Project Description: ");
         parameters.put("description", input.nextLine());
 
-        System.out.print("Legg til status: ");
+        System.out.print("Add a Project Status ( Starting, Running, Finished, Delayed): ");
         parameters.put("status", input.nextLine());
 
         List<TaskManager> allAvailableTM = dh.getAllAvailableTaskManagers();

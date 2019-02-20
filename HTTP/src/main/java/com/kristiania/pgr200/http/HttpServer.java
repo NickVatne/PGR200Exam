@@ -102,7 +102,7 @@ public class HttpServer {
         output.flush();
     }
 
-    private String doGet(String path) throws SQLException {
+    public String doGet(String path) throws SQLException {
         if (path.equals("db/task")) {
             return new DatabaseHandler().listAllProject();
         }
