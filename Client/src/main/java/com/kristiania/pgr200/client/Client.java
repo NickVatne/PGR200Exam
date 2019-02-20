@@ -45,7 +45,7 @@ public class Client {
                 //list All Talks
                 System.out.println();
                 System.out.println("----Listing all Projects----");
-                HttpResponse response = new HttpRequest("GET", "localhost", 0, "db/task").execute();
+                HttpResponse response = new HttpRequest("GET", "localhost", 12080, "db/task").execute();
                 System.out.println(response.getBody());
                 System.out.println(("(Press 9 to go back to Main Menu)"));
 

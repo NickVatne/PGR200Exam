@@ -59,8 +59,8 @@ public class TaskDao extends AbstractDao {
         }
     }
     public List<ProjectFormatted> getAllProjectsFormatted() throws SQLException {
-        String sql = "SELECT ta.id, ta title, ta.description, ta.status, tm.first_user, tm.second_user, tm.third_user from TASK ta"
-                + "INNER JOIN TASKMANAGER tm on (tm.id = ta.taskmanager_id)";
+        String sql = "SELECT ta.id, ta title, ta.description, ta.status, tm.first_user, tm.second_user, tm.third_user FROM task ta"
+                + " INNER JOIN taskmanager tm on (tm.id = ta.taskmanager_id)";
         try (Connection conn = dataSource.getConnection()) {
             try (PreparedStatement statement = conn.prepareStatement(sql)) {
                 try (ResultSet rs = statement.executeQuery()) {
