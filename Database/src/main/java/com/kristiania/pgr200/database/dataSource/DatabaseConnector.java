@@ -62,7 +62,7 @@ public class DatabaseConnector {
         return dataSource;
     }
 
-    private static DataSource createDataSource(Properties prop){
+    public static DataSource createDataSource(Properties prop){
         PGPoolingDataSource dataSource = new PoolingDataSource();
         dataSource.setURL(prop.getProperty("dataSource.url"));
         dataSource.setUser(prop.getProperty("dataSource.username"));

@@ -8,22 +8,22 @@ import java.sql.SQLException;
 
 public class DataSourceTest {
 
-    public static void resetDB(DataSource dataSource) throws SQLException{
+    public  void resetDB(DataSource dataSource) throws SQLException{
         Flyway flyway = new Flyway();
         flyway.setDataSource(dataSource);
         flyway.clean();
-        createTestDb();
+        createDataSource();
     }
 
-    public static DataSource createTestDb() {
+    public static DataSource createDataSource() {
         JdbcDataSource dataSource = new JdbcDataSource();
         dataSource.setURL("jdbc:h2:mem:test;DB_CLOSE_DELAY=-1");
         dataSource.setUser("sa");
 
-        Flyway flyway = new Flyway();
-        flyway.setDataSource(dataSource);
-        flyway.migrate();
-
+        Flyway.configure().dataSource(dataSource).load().migrate();
         return dataSource;
+    }
+    public static DataSource createTempDataSource(){
+        return createDataSource();
     }
 }

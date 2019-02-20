@@ -20,6 +20,7 @@ public class TaskDao extends AbstractDao {
     private String sqlUpdateFirstU = "UPDATE TASK SET FIRST_USER = ? WHERE ID = ?";
     private String sqlUpdateSecondU = "UPDATE TASK SET SECOND_USER = ? WHERE ID = ?";
     private String sqlUpdateThirdU = "UPDATE TASK SET THIRD_USER = ? WHERE ID = ?";
+    private String sqlGet = "SELECT * FROM TASK WHERE ID = ";
     private String sqlGetAll = "SELECT * FROM TASK";
 
     public TaskDao(DataSource dataSource){
@@ -28,6 +29,10 @@ public class TaskDao extends AbstractDao {
 
     public List<Task> getAll() throws SQLException {
         return list(sqlGetAll, this::mapToTask);
+    }
+
+    public Task get(int id) throws SQLException {
+        return get(sqlGet, this::mapToTask, id);
     }
 
     public void save(Task task) throws SQLException {
