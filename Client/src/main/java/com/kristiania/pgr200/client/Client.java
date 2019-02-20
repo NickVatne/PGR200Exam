@@ -112,7 +112,7 @@ public class Client {
         System.out.print("Chose the ID of the task you wish to update: ");
         parameters.put("id", selectTask(input, allAvailableTasks));
         System.out.println();
-        System.out.println("Do you wish to update the title, description, status, first_user, second_user or third_user?");
+        System.out.println("Do you wish to update the title, description, status, participant1, participant2 or participant3?");
         System.out.print("Enter what you wish to change: ");
 
         String inputChoice = input.nextLine();
@@ -141,7 +141,7 @@ public class Client {
 
             return parameters;
 
-        } else if (inputChoice.equalsIgnoreCase("first_user")) {
+        } else if (inputChoice.equalsIgnoreCase("participant1")) {
             System.out.print("New first user: ");
             String newFirstU = input.nextLine();
             parameters.put("first_user", newFirstU);
@@ -149,7 +149,7 @@ public class Client {
 
             return parameters;
 
-        } else if (inputChoice.equalsIgnoreCase("second_user")) {
+        } else if (inputChoice.equalsIgnoreCase("participant2")) {
             System.out.print("New second user: ");
             String newSecondU = input.nextLine();
             parameters.put("second_user", newSecondU);
@@ -157,7 +157,7 @@ public class Client {
 
             return parameters;
 
-        } else if (inputChoice.equalsIgnoreCase("third_user")) {
+        } else if (inputChoice.equalsIgnoreCase("participant3")) {
             System.out.print("New third user: ");
             String newThirdU = input.nextLine();
             parameters.put("third_user", newThirdU);
