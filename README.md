@@ -5,7 +5,7 @@
 
 
 ##### Database Design
-![DB SCHEME DESIGN](/documentation/DBSCHEMA.png)
+![Screenshot](documentation/DBSCHEMA.png)
 
 ------------------------------------------------------------------------------------------------------------
 
