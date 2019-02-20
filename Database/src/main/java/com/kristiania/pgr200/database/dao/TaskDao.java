@@ -13,11 +13,11 @@ import java.util.List;
 
 public class TaskDao extends AbstractDao {
 
-    private String updateSQL = "INSERT INTO TASK (TITLE, DESCRIPTION, STATUS) VALUES (?,?,?)";
+    private String updateSQL = "INSERT INTO task (TITLE, DESCRIPTION, STATUS) VALUES (?,?,?)";
     private String sqlUpdateTitle = "UPDATE TASK SET TITLE = ? WHERE ID = ?";
     private String sqlUpdateDesc = "UPDATE TASK SET DESCRIPTION = ? WHERE ID = ?";
     private String sqlUpdateStatus = "UPDATE TASK SET STATUS = ? WHERE ID = ?";
-    private String sqlGetAll = "SELECT * FROM TASK";
+    private String sqlGetAll = "SELECT ta.title, ta.description, ta.status, tm.first_user, tm.second_user, tm.third_user FROM TASK as ta, TASKMANAGER as tm ";
 
     public TaskDao(DataSource dataSource){
         super(dataSource);
@@ -44,8 +44,8 @@ public class TaskDao extends AbstractDao {
     }
     private Task mapToTask(ResultSet rs) throws SQLException{
         Task task = new Task();
-        task.setId(rs.getInt("ID"));
-        task.setTitle(rs.getString("TITLE"));
+        task.setId(rs.getInt("id"));
+        task.setTitle(rs.getString("title"));
 
         return task;
     }

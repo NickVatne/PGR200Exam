@@ -1,9 +1,12 @@
-# PGR200Exam
-PGR200 Exam
+## PGR200 - Advanced Java Exam
+![Screenshot](https://travis-ci.com/NickVatne/PGR200Exam.svg?branch=master)
+##### Database Design
+![Screenshot](documentation/PGR200 Exam DBSheet.png)
+------------------------------------------------------
 
 EKSAMENSOPPGAVENE:
 
-DATABASE
+#####DATABASE
 - DB skal inneholde Oppgavenavn, Beskrivelse, Status, Oppgavetakere
 - DB Funksjoner:
   - Opprette
@@ -11,13 +14,13 @@ DATABASE
   - Se på detaljer
   - Endre oppgaver
 
-HTTP/SERVER
+#####HTTP/SERVER
 - Ta i bruk POST for opprettelse og oppdateringer av oppgaver
 - Ta i bruk GET for å hente oppgaver
 - Serveren lagrer oppgavene i Postgresql
 - Conncection url, brukernavn og passord til DB skal ligge i properties-fil
 
-ANNET
+#####ANNET
 - Demonstrere bruk av Github og Travis-CI
 - README.md-fil som inneholder:
   - Fullstendig brukerveiledning
@@ -26,3 +29,4 @@ ANNET
   - Diagram med beskrivelse av programfunksjonalitet
   - Link til screencast video(parprogrammering)
   - Skrive tester i JUnit
+
