@@ -7,6 +7,9 @@
 
 ## PGR200 - Advanced Java Exam
 
+![Screenshot](https://travis-ci.com/NickVatne/PGR200Exam.svg?branch=master)
+
+
 ###Kjøreinstruksjoner
 
 #####Terminal/Cmd
@@ -38,10 +41,6 @@
 - Følg meny-valg i client-terminalvindu.
 
 ------------------------------------------------------------------------------------------------------------
-
-
-![Screenshot](https://travis-ci.com/NickVatne/PGR200Exam.svg?branch=master)
-
 ------------------------------------------------------------------------------------------------------------
 
 
