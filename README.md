@@ -19,7 +19,7 @@
 
 - Åpne nytt terminal/cmd vindu
 
-- Vaviger til cli/target mappe
+- Vaviger til Client/target mappe
 
 - Skriv inn java -cp com.kristiania.pgr200.client-0.0.1.jar com.kristiania.pgr200.client.Client
 

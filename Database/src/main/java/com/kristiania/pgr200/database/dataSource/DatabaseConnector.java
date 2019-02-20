@@ -48,7 +48,7 @@ public class DatabaseConnector {
 
         DataSource dataSource = createDataSource(prop);
         try {
-            executeConnection(dataSource, readFile("Database/src/main/resources/db.migration/V01__create_tables.sql"));
+            executeConnection(dataSource, readFile("Database/src/main/resources/db/migration/V01__create_tables.sql"));
         } catch ( SQLException e ){
             e.printStackTrace();
         }

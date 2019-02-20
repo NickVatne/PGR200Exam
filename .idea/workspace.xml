@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="74ef0025-38ba-417a-b6ae-3b92f5d12962" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Database/src/main/resources/db.migration/V01__create_tables.sql" beforeDir="false" afterPath="$PROJECT_DIR$/Database/src/main/resources/db.migration/V01__create_tables.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Database/src/test/java/com/kristiania/pgr200/database/dao/TestDataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/Database/src/test/java/com/kristiania/pgr200/database/dao/TestDataSource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Database/target/classes/com/kristiania/pgr200/database/dao/TaskDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Database/src/main/java/com/kristiania/pgr200/database/dataSource/DatabaseConnector.java" beforeDir="false" afterPath="$PROJECT_DIR$/Database/src/main/java/com/kristiania/pgr200/database/dataSource/DatabaseConnector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Database/src/main/resources/db.migration/V01__create_tables.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Database/src/test/java/com/kristiania/pgr200/database/dao/TaskDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Database/src/test/java/com/kristiania/pgr200/database/dao/TaskDaoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Database/target/test-classes/com/kristiania/pgr200/database/dao/TestDataSource.class" beforeDir="false" afterPath="$PROJECT_DIR$/Database/target/test-classes/com/kristiania/pgr200/database/dao/TestDataSource.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -13,7 +15,6 @@
     <ignored path="$PROJECT_DIR$/Database/target/" />
     <ignored path="$PROJECT_DIR$/HTTP/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -47,33 +48,68 @@
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="project@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="project: database" type="6d9b600a:PostgresImplModel$Database" />
+        <item name="project: database" type="162271b6:PgImplModel$Database" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="project@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="project: database" type="6d9b600a:PostgresImplModel$Database" />
-        <item name="public: schema" type="a16502c0:PostgresImplModel$Schema" />
+        <item name="project: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="project@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="project: database" type="6d9b600a:PostgresImplModel$Database" />
-        <item name="public: schema" type="a16502c0:PostgresImplModel$Schema" />
+        <item name="project: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="project@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="project: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
         <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="project@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="project: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="task: table" type="69fad909:PgImplModel$LocalTable" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="project@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="project: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
+        <item name="sequences" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="project@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="project: database" type="162271b6:PgImplModel$Database" />
+        <item name="access methods" type="d4e8921:DatabaseStructure$FamilyGroup" />
       </path>
     </expand>
     <select />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Client.java" pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Client/src/main/java/com/kristiania/pgr200/client/Client.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+            <state relative-caret-position="223">
+              <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -81,90 +117,52 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Database/pom.xml">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="V01__create_tables.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Database/src/main/resources/db.migration/V01__create_tables.sql">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HTTP/src/main/java/com/kristiania/pgr200/http/HttpServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="14" lean-forward="true" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
+            <state relative-caret-position="-928">
+              <caret line="24" column="54" selection-start-line="24" selection-start-column="54" selection-end-line="24" selection-end-column="54" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Database/src/main/java/com/kristiania/pgr200/database/dataSource/DatabaseConnector.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="261">
+              <caret line="52" column="32" selection-start-line="52" selection-start-column="32" selection-end-line="52" selection-end-column="32" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="345">
-                <caret line="23" column="88" selection-start-line="23" selection-start-column="88" selection-end-line="23" selection-end-column="88" />
+              <first_editor relative-caret-position="159">
+                <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
               </first_editor>
               <second_editor />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DataSourceTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Database/src/test/java/com/kristiania/pgr200/database/dao/DataSourceTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="26" column="27" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="27" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#768#769#0" expanded="true" />
-                <element signature="e#808#809#0" expanded="true" />
-              </folding>
+      <file pinned="false" current-in-tab="false">
+        <entry file="das://ad1e138a-fc75-48b9-b94d-4ec6d583bf9f/database/project/schema/public/table/task">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="misc.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.idea/misc.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="111" selection-start-line="10" selection-start-column="111" selection-end-line="10" selection-end-column="111" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TaskDaoTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Database/src/test/java/com/kristiania/pgr200/database/dao/TaskDaoTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1215">
-              <caret line="81" selection-start-line="81" selection-end-line="81" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DatabaseHandler.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Database/src/main/java/com/kristiania/pgr200/database/DatabaseHandler/DatabaseHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="13" selection-start-line="13" selection-end-line="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HttpRequest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HTTP/src/main/java/com/kristiania/pgr200/http/HttpRequest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="21" column="98" selection-start-line="21" selection-start-column="98" selection-end-line="21" selection-end-column="98" />
-              <folding>
-                <element signature="e#1464#1465#0" expanded="true" />
-                <element signature="e#1508#1509#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TaskDao.java" pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Database/src/main/java/com/kristiania/pgr200/database/dao/TaskDao.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="555">
@@ -172,6 +170,44 @@
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Database/src/test/java/com/kristiania/pgr200/database/dao/TaskDaoTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1472">
+              <caret line="64" selection-start-line="64" selection-end-line="64" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Database/src/test/java/com/kristiania/pgr200/database/dao/TestDataSource.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="382">
+              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Database/src/main/resources/db/migration/V01__create_tables.sql">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Database/src/main/java/com/kristiania/pgr200/database/DatabaseHandler/DatabaseHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-116">
+              <caret line="13" selection-start-line="13" selection-end-line="13" />
             </state>
           </provider>
         </entry>
@@ -204,11 +240,9 @@
         <option value="$PROJECT_DIR$/Database/src/main/resources/db.migration/V02_create_sequences.sql" />
         <option value="$PROJECT_DIR$/Database/src/main/resources/db.migration/V02__create_sequences.sql" />
         <option value="$PROJECT_DIR$/Database/src/main/java/com/kristiania/pgr200/database/dao/TaskManagerDao.java" />
-        <option value="$PROJECT_DIR$/Database/src/main/java/com/kristiania/pgr200/database/dataSource/DatabaseConnector.java" />
         <option value="$PROJECT_DIR$/Database/src/main/java/com/kristiania/pgr200/database/entity/TaskManager.java" />
         <option value="$PROJECT_DIR$/Database/src/main/java/com/kristiania/pgr200/database/entity/ProjectFormatted.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/Database/src/test/java/com/kristiania/pgr200/database/dao/TaskDaoTest.java" />
         <option value="$PROJECT_DIR$/Client/src/main/java/com/kristiania/pgr200/client/Client.java" />
         <option value="$PROJECT_DIR$/Database/src/main/java/com/kristiania/pgr200/database/DatabaseHandler/DatabaseHandler.java" />
         <option value="$PROJECT_DIR$/HTTP/src/main/java/com/kristiania/pgr200/http/HttpServer.java" />
@@ -223,15 +257,11 @@
         <option value="$PROJECT_DIR$/Database/src/test/java/com/kristiania/pgr200/database/dao/TestDataSource.java" />
         <option value="$PROJECT_DIR$/.idea/misc.xml" />
         <option value="$PROJECT_DIR$/Database/src/main/resources/db.migration/V01__create_tables.sql" />
+        <option value="$PROJECT_DIR$/Database/src/test/java/com/kristiania/pgr200/database/dao/TaskDaoTest.java" />
+        <option value="$PROJECT_DIR$/Database/src/main/java/com/kristiania/pgr200/database/dataSource/DatabaseConnector.java" />
         <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
-  </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
@@ -256,14 +286,10 @@
       <select />
     </treeState>
   </component>
-  <component name="NodePackageJsonFileManager">
-    <packageJsonPaths />
-  </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="25" />
-    <option name="y" value="23" />
-    <option name="width" value="1813" />
-    <option name="height" value="1110" />
+    <option name="x" value="2010" />
+    <option name="width" value="1350" />
+    <option name="height" value="999" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -271,6 +297,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Course" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -281,41 +310,6 @@
             <path>
               <item name="pgr200exam" type="b2602c69:ProjectViewProjectNode" />
               <item name="PGR200Exam" type="462c0819:PsiDirectoryNode" />
-              <item name="Client" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pgr200exam" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PGR200Exam" type="462c0819:PsiDirectoryNode" />
-              <item name="Client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pgr200exam" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PGR200Exam" type="462c0819:PsiDirectoryNode" />
-              <item name="Client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pgr200exam" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PGR200Exam" type="462c0819:PsiDirectoryNode" />
-              <item name="Client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pgr200exam" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PGR200Exam" type="462c0819:PsiDirectoryNode" />
-              <item name="Client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pgr200exam" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PGR200Exam" type="462c0819:PsiDirectoryNode" />
               <item name="Database" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -329,14 +323,14 @@
               <item name="PGR200Exam" type="462c0819:PsiDirectoryNode" />
               <item name="Database" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="pgr200exam" type="b2602c69:ProjectViewProjectNode" />
               <item name="PGR200Exam" type="462c0819:PsiDirectoryNode" />
               <item name="Database" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -344,70 +338,13 @@
               <item name="PGR200Exam" type="462c0819:PsiDirectoryNode" />
               <item name="Database" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="database" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pgr200exam" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PGR200Exam" type="462c0819:PsiDirectoryNode" />
-              <item name="Database" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="database" type="462c0819:PsiDirectoryNode" />
               <item name="dao" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="pgr200exam" type="b2602c69:ProjectViewProjectNode" />
               <item name="PGR200Exam" type="462c0819:PsiDirectoryNode" />
-              <item name="Database" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="database" type="462c0819:PsiDirectoryNode" />
-              <item name="DatabaseHandler" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pgr200exam" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PGR200Exam" type="462c0819:PsiDirectoryNode" />
-              <item name="Database" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="database" type="462c0819:PsiDirectoryNode" />
-              <item name="dataSource" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pgr200exam" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PGR200Exam" type="462c0819:PsiDirectoryNode" />
-              <item name="Database" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="database" type="462c0819:PsiDirectoryNode" />
-              <item name="entity" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pgr200exam" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PGR200Exam" type="462c0819:PsiDirectoryNode" />
-              <item name="Database" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pgr200exam" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PGR200Exam" type="462c0819:PsiDirectoryNode" />
-              <item name="Database" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="db.migration" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pgr200exam" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PGR200Exam" type="462c0819:PsiDirectoryNode" />
               <item name="HTTP" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -421,14 +358,14 @@
               <item name="PGR200Exam" type="462c0819:PsiDirectoryNode" />
               <item name="HTTP" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="pgr200exam" type="b2602c69:ProjectViewProjectNode" />
               <item name="PGR200Exam" type="462c0819:PsiDirectoryNode" />
               <item name="HTTP" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -436,7 +373,7 @@
               <item name="PGR200Exam" type="462c0819:PsiDirectoryNode" />
               <item name="HTTP" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="http" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -444,10 +381,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
-      <pane id="Course" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -455,7 +388,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550692007698" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550703409390" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -464,6 +397,16 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Database/src/main/resources/db/migration" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Database/src/main/resources/db.migration" />
+      <recent name="$PROJECT_DIR$/Database/src/main/resources" />
+      <recent name="$PROJECT_DIR$/Database/src/main/resources/db/migration" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -477,7 +420,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Client">
+  <component name="RunManager" selected="JUnit.com.kristiania.pgr200.http in HTTP">
     <configuration name="Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.kristiania.pgr200.client.Client" />
       <module name="Client" />
@@ -488,81 +431,29 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-    </configuration>
-    <configuration default="true" type="Application" factoryName="Application">
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <method>
+      <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HTTPClientTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="HttpServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.kristiania.pgr200.http.HttpServer" />
       <module name="HTTP" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.kristiania.pgr200.http.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.kristiania.pgr200.http" />
-      <option name="MAIN_CLASS_NAME" value="com.kristiania.pgr200.http.HTTPClientTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
-    <configuration name="HTTPClientTest.shouldReadResponseBody" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="HTTP" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.kristiania.pgr200.http.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.kristiania.pgr200.http" />
-      <option name="MAIN_CLASS_NAME" value="com.kristiania.pgr200.http.HTTPClientTest" />
-      <option name="METHOD_NAME" value="shouldReadResponseBody" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-    </configuration>
-    <configuration name="HTTPClientTest.shouldReadResponseHeaders" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="HTTP" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.kristiania.pgr200.http.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.kristiania.pgr200.http" />
-      <option name="MAIN_CLASS_NAME" value="com.kristiania.pgr200.http.HTTPClientTest" />
-      <option name="METHOD_NAME" value="shouldReadResponseHeaders" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="TaskDaoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Database" />
@@ -572,79 +463,78 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="com.kristiania.pgr200.database.dao" />
       <option name="MAIN_CLASS_NAME" value="com.kristiania.pgr200.database.dao.TaskDaoTest" />
-      <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-    </configuration>
-    <configuration default="true" type="JUnit" factoryName="JUnit">
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-      <method>
+      <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="TestNG" factoryName="TestNG">
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="CLASS" />
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="com.kristiania.pgr200.database.dao in Database" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Database" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.kristiania.pgr200.database.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.kristiania.pgr200.database.dao" />
+      <option name="TEST_OBJECT" value="package" />
+      <option name="VM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="com.kristiania.pgr200.http in HTTP" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="HTTP" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.kristiania.pgr200.http.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.kristiania.pgr200.http" />
+      <option name="TEST_OBJECT" value="package" />
+      <option name="VM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="TestNG">
+      <option name="VM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <properties />
       <listeners />
-      <method>
+      <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.HTTPClientTest" />
-      <item itemvalue="JUnit.HTTPClientTest.shouldReadResponseHeaders" />
-      <item itemvalue="JUnit.HTTPClientTest.shouldReadResponseBody" />
-      <item itemvalue="JUnit.TaskDaoTest" />
       <item itemvalue="Application.Client" />
+      <item itemvalue="JUnit.TaskDaoTest" />
+      <item itemvalue="Application.HttpServer" />
+      <item itemvalue="JUnit.com.kristiania.pgr200.database.dao in Database" />
+      <item itemvalue="JUnit.com.kristiania.pgr200.http in HTTP" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Client" />
+        <item itemvalue="JUnit.com.kristiania.pgr200.http in HTTP" />
+        <item itemvalue="JUnit.com.kristiania.pgr200.database.dao in Database" />
         <item itemvalue="JUnit.TaskDaoTest" />
-        <item itemvalue="JUnit.HTTPClientTest" />
-        <item itemvalue="JUnit.HTTPClientTest.shouldReadResponseBody" />
-        <item itemvalue="JUnit.HTTPClientTest.shouldReadResponseHeaders" />
+        <item itemvalue="Application.Client" />
+        <item itemvalue="Application.HttpServer" />
       </list>
     </recent_temporary>
   </component>
@@ -662,43 +552,44 @@
       <workItem from="1550594577531" duration="15912000" />
       <workItem from="1550653605290" duration="22960000" />
       <workItem from="1550677964929" duration="92000" />
+      <workItem from="1550701803089" duration="1588000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="HTTPResponseTest_shouldReadOtherStatusCode - 2019.02.20 at 20h 27m 14s.xml">
-      <configuration name="HTTPResponseTest.shouldReadOtherStatusCode" configurationId="JUnit" />
+    <history-entry file="TaskDaoTest - 2019.02.20 at 23h 40m 26s.xml">
+      <configuration name="TaskDaoTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="HTTPResponseTest_shouldReadOtherStatusCode - 2019.02.20 at 20h 27m 31s.xml">
-      <configuration name="HTTPResponseTest.shouldReadOtherStatusCode" configurationId="JUnit" />
+    <history-entry file="TaskDaoTest - 2019.02.20 at 23h 41m 32s.xml">
+      <configuration name="TaskDaoTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="HTTPResponseTest_shouldReadOtherStatusCode - 2019.02.20 at 20h 27m 40s.xml">
-      <configuration name="HTTPResponseTest.shouldReadOtherStatusCode" configurationId="JUnit" />
+    <history-entry file="TaskDaoTest - 2019.02.20 at 23h 41m 54s.xml">
+      <configuration name="TaskDaoTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="HTTPResponseTest_shouldHandlePostRequest - 2019.02.20 at 20h 28m 19s.xml">
-      <configuration name="HTTPResponseTest.shouldHandlePostRequest" configurationId="JUnit" />
+    <history-entry file="TaskDaoTest - 2019.02.20 at 23h 42m 20s.xml">
+      <configuration name="TaskDaoTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="HTTPResponseTest_shouldHandlePostRequest - 2019.02.20 at 20h 28m 31s.xml">
-      <configuration name="HTTPResponseTest.shouldHandlePostRequest" configurationId="JUnit" />
+    <history-entry file="TaskDaoTest - 2019.02.20 at 23h 46m 58s.xml">
+      <configuration name="TaskDaoTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="HTTPResponseTest_shouldReadResponseHeaders - 2019.02.20 at 20h 29m 20s.xml">
-      <configuration name="HTTPResponseTest.shouldReadResponseHeaders" configurationId="JUnit" />
+    <history-entry file="TaskDaoTest - 2019.02.20 at 23h 48m 24s.xml">
+      <configuration name="TaskDaoTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="HTTPResponseTest_shouldReadResponseBody - 2019.02.20 at 20h 29m 52s.xml">
-      <configuration name="HTTPResponseTest.shouldReadResponseBody" configurationId="JUnit" />
+    <history-entry file="TaskDaoTest - 2019.02.20 at 23h 48m 50s.xml">
+      <configuration name="TaskDaoTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="HTTPResponseTest - 2019.02.20 at 20h 29m 57s.xml">
-      <configuration name="HTTPResponseTest" configurationId="JUnit" />
+    <history-entry file="TaskDaoTest - 2019.02.20 at 23h 50m 08s.xml">
+      <configuration name="TaskDaoTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="HTTPResponseTest - 2019.02.20 at 20h 31m 10s.xml">
-      <configuration name="HTTPResponseTest" configurationId="JUnit" />
+    <history-entry file="com_kristiania_pgr200_database_dao_in_Database - 2019.02.20 at 23h 53m 19s.xml">
+      <configuration name="com.kristiania.pgr200.database.dao in Database" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="HTTPClientTest - 2019.02.20 at 20h 31m 41s.xml">
-      <configuration name="HTTPClientTest" configurationId="JUnit" />
+    <history-entry file="com_kristiania_pgr200_http_in_HTTP - 2019.02.20 at 23h 53m 34s.xml">
+      <configuration name="com.kristiania.pgr200.http in HTTP" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43633000" />
+    <option name="totallyTimeSpent" value="45221000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -710,74 +601,46 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="25" y="23" width="1813" height="1107" extended-state="0" />
+    <frame x="1680" y="0" width="1680" height="999" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info anchor="right" id="Palette" order="4" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="right" id="Maven Projects" order="3" weight="0.3297572" />
-      <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
-      <window_info anchor="right" id="Flutter Outline" order="3" />
-      <window_info id="Capture Tool" order="4" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1898657" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
-      <window_info anchor="bottom" id="Educational.CheckDetails" order="9" />
-      <window_info anchor="bottom" id="EvoSuite" order="7" />
-      <window_info anchor="right" id="Database" order="7" weight="0.13777527" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info id="UI Designer" order="5" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3990099" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32971373" />
-      <window_info anchor="bottom" id="Messages" order="7" visible="true" weight="0.32871288" />
-      <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info id="Image Layers" order="3" />
-      <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="bottom" id="Flutter Performance" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32970297" />
-      <window_info anchor="bottom" id="Version Control" order="12" weight="0.32925472" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32872656" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25409374" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32971373" />
-      <window_info anchor="right" id="Theme Preview" order="9" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="right" id="Flutter Inspector" order="3" />
-      <window_info anchor="right" id="Flutter Inspector" order="6" />
-      <window_info anchor="bottom" id="Educational.CheckDetails" order="12" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3281893" />
-      <window_info anchor="bottom" id="Version Control" order="16" weight="0.32925472" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32872656" />
-      <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
-      <window_info anchor="right" id="Key Promoter X" order="9" weight="0.32960597" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18009768" />
-      <window_info anchor="right" id="Flutter Outline" order="4" />
-      <window_info anchor="right" id="Palette" order="7" />
-      <window_info anchor="bottom" id="EvoSuite" order="9" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32971373" />
-      <window_info anchor="right" id="Database" order="10" weight="0.30830282" />
-      <window_info anchor="right" id="Capture Analysis" order="8" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven Projects" order="5" />
-      <window_info anchor="right" id="Palette&#9;" order="11" />
-      <window_info anchor="bottom" id="Database Console" order="15" weight="0.32872656" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info id="UI Designer" order="5" />
-      <window_info anchor="right" id="Theme Preview" order="12" />
-      <window_info id="Image Layers" order="3" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32971373" />
-      <window_info anchor="bottom" id="Event Log" order="13" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32934132" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32814237" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39980257" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info id="Designer" order="2" />
-      <window_info anchor="bottom" id="Database Changes" order="14" show_stripe_button="false" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Maven" order="3" weight="0.2869353" />
-      <window_info id="Capture Tool" order="4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32971373" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32872656" />
       <window_info anchor="bottom" id="Messages" order="8" weight="0.29441118" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39980257" />
+      <window_info anchor="bottom" id="EvoSuite" order="9" />
       <window_info anchor="bottom" id="Flutter Performance" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Educational.CheckDetails" order="12" />
+      <window_info anchor="bottom" id="Event Log" order="13" side_tool="true" />
+      <window_info anchor="bottom" id="Database Changes" order="14" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Console" order="15" weight="0.32872656" />
+      <window_info anchor="bottom" id="Version Control" order="16" weight="0.32925472" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" weight="0.28647497" />
+      <window_info anchor="right" id="Flutter Outline" order="4" />
+      <window_info anchor="right" id="Maven Projects" order="5" />
+      <window_info anchor="right" id="Flutter Inspector" order="6" />
+      <window_info anchor="right" id="Palette" order="7" />
+      <window_info anchor="right" id="Capture Analysis" order="8" />
+      <window_info anchor="right" id="Key Promoter X" order="9" weight="0.32960597" />
+      <window_info anchor="right" id="Database" order="10" weight="0.35286936" />
+      <window_info anchor="right" id="Palette&#9;" order="11" />
+      <window_info anchor="right" id="Theme Preview" order="12" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -795,7 +658,6 @@
           <option name="timeStamp" value="15" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="1" />
     </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
@@ -803,41 +665,10 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="das://2b5b90b0-5a65-43e2-9bf8-7218e14a8898/database/project/schema/public/table/task">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://2b5b90b0-5a65-43e2-9bf8-7218e14a8898/database/project/schema/public/table/task">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://2b5b90b0-5a65-43e2-9bf8-7218e14a8898/database/project/schema/public/table/task">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/HTTP/src/main/java/com/kristiania/pgr200/http/RequestType.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HTTP/src/main/java/com/kristiania/pgr200/http/HttpServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="33" column="54" selection-start-line="33" selection-start-column="54" selection-end-line="33" selection-end-column="54" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -848,126 +679,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Database/src/main/java/com/kristiania/pgr200/database/dao/AbstractDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="13" column="42" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HTTP/src/main/java/com/kristiania/pgr200/http/HttpResponse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-507">
-          <caret line="11" column="27" lean-forward="true" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Database/src/main/java/com/kristiania/pgr200/database/entity/ProjectFormatted.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HTTP/src/main/java/com/kristiania/pgr200/http/HttpRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="21" column="98" selection-start-line="21" selection-start-column="98" selection-end-line="21" selection-end-column="98" />
-          <folding>
-            <element signature="e#1464#1465#0" expanded="true" />
-            <element signature="e#1508#1509#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Client/src/main/java/com/kristiania/pgr200/client/Client.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1246">
-          <caret line="163" column="86" selection-start-line="163" selection-start-column="86" selection-end-line="163" selection-end-column="86" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Database/src/main/java/com/kristiania/pgr200/database/entity/Task.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="551">
-          <caret line="69" selection-start-line="69" selection-end-line="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Database/src/main/java/com/kristiania/pgr200/database/DatabaseHandler/DatabaseHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Database/src/main/java/com/kristiania/pgr200/database/dataSource/DatabaseConnector.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="53" column="9" selection-start-line="53" selection-start-column="9" selection-end-line="53" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Database/src/main/java/com/kristiania/pgr200/database/dao/TaskDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="39" selection-start-line="39" selection-end-line="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Database/src/test/java/com/kristiania/pgr200/database/dao/DataSourceTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="27" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#768#769#0" expanded="true" />
-            <element signature="e#808#809#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Database/src/test/java/com/kristiania/pgr200/database/dao/TaskDaoTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="81" selection-start-line="81" selection-end-line="81" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Database/src/test/java/com/kristiania/pgr200/database/dao/TestDataSource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="71" selection-start-line="12" selection-start-column="71" selection-end-line="12" selection-end-column="71" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="das://2b5b90b0-5a65-43e2-9bf8-7218e14a8898/database/project/schema/public/sequence/task_id_seq" />
     <entry file="file://$PROJECT_DIR$/../innlevering-2-jdbc-NickVatne/src/main/resources/db/migration/V002__create_table_day.sql" />
     <entry file="das://2b5b90b0-5a65-43e2-9bf8-7218e14a8898/database/project/schema/public/table/taskmanager" />
     <entry file="file://$PROJECT_DIR$/Database/src/main/java/com/kristiania/pgr200/database/entity/TaskManager.java" />
     <entry file="file://$PROJECT_DIR$/Database/src/main/java/com/kristiania/pgr200/database/dao/TaskManagerDao.java" />
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="386">
-          <caret line="22" column="37" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://1e3f41bb-4415-4507-be01-5e9a18d5858e/database/project/schema/public/table/taskmanager" />
     <entry file="das://1e3f41bb-4415-4507-be01-5e9a18d5858e/database/project/schema/public/table/task" />
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
@@ -998,16 +714,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Database/src/main/java/com/kristiania/pgr200/database/dataSource/DatabaseConnector.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="53" column="9" selection-start-line="53" selection-start-column="9" selection-end-line="53" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-9.0.4.jdk/Contents/Home/lib/src.zip!/java.base/java/lang/String.java" />
     <entry file="jar://$MAVEN_REPOSITORY$/org/postgresql/postgresql/42.2.5/postgresql-42.2.5-sources.jar!/org/postgresql/ds/PGPoolingDataSource.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1023,34 +729,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Database/src/main/java/com/kristiania/pgr200/database/dao/TaskDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="39" selection-start-line="39" selection-end-line="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Database/src/main/java/com/kristiania/pgr200/database/DatabaseHandler/DatabaseHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://2b5b90b0-5a65-43e2-9bf8-7218e14a8898/database/project/schema/public/table/task" />
-    <entry file="file://$PROJECT_DIR$/HTTP/src/main/java/com/kristiania/pgr200/http/HttpServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12-sources.jar!/org/junit/Assert.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="681">
@@ -1063,17 +742,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1702">
           <caret line="74" selection-start-line="74" selection-end-line="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HTTP/src/main/java/com/kristiania/pgr200/http/HttpRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="21" column="98" selection-start-line="21" selection-start-column="98" selection-end-line="21" selection-end-column="98" />
-          <folding>
-            <element signature="e#1464#1465#0" expanded="true" />
-            <element signature="e#1508#1509#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1093,20 +761,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Database/src/test/java/com/kristiania/pgr200/database/dao/DataSourceTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
+        <state relative-caret-position="575">
           <caret line="26" column="27" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#768#769#0" expanded="true" />
-            <element signature="e#808#809#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Database/src/test/java/com/kristiania/pgr200/database/dao/TaskDaoTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1215">
-          <caret line="81" selection-start-line="81" selection-end-line="81" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1115,25 +771,133 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.idea/misc.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
+        <state relative-caret-position="230">
           <caret line="10" column="111" selection-start-line="10" selection-start-column="111" selection-end-line="10" selection-end-column="111" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Database/pom.xml">
+    <entry file="file://$PROJECT_DIR$/Database/flywayConfig.properties.trace.db">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Database/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="33" column="48" lean-forward="true" selection-start-line="33" selection-start-column="48" selection-end-line="33" selection-end-column="48" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Database/src/main/resources/db.migration/V01__create_tables.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="14" lean-forward="true" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
+        <state relative-caret-position="46">
+          <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PGR200Exams.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HTTP/pom.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="17" column="18" lean-forward="true" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/flywaydb/flyway-core/5.2.0/flyway-core-5.2.0-sources.jar!/org/flywaydb/core/internal/scanner/Scanner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="38" column="13" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/flywaydb/flyway-core/5.2.0/flyway-core-5.2.0-sources.jar!/org/flywaydb/core/internal/scanner/classpath/ClassPathScanner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="85" column="46" selection-start-line="85" selection-start-column="46" selection-end-line="85" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HTTP/src/main/java/com/kristiania/pgr200/http/HttpRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="21" column="98" selection-start-line="21" selection-start-column="98" selection-end-line="21" selection-end-column="98" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Database/src/main/java/com/kristiania/pgr200/database/dao/TaskDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="39" selection-start-line="39" selection-end-line="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Client/src/main/java/com/kristiania/pgr200/client/Client.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        <state relative-caret-position="223">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HTTP/src/main/java/com/kristiania/pgr200/http/HttpServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-928">
+          <caret line="24" column="54" selection-start-line="24" selection-start-column="54" selection-end-line="24" selection-end-column="54" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Database/src/main/resources/db/migration/V01__create_tables.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Database/src/main/java/com/kristiania/pgr200/database/DatabaseHandler/DatabaseHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-116">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Database/src/main/java/com/kristiania/pgr200/database/dataSource/DatabaseConnector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="52" column="32" selection-start-line="52" selection-start-column="32" selection-end-line="52" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://ad1e138a-fc75-48b9-b94d-4ec6d583bf9f/database/project/schema/public/table/task">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Database/src/test/java/com/kristiania/pgr200/database/dao/TaskDaoTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1472">
+          <caret line="64" selection-start-line="64" selection-end-line="64" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Database/src/test/java/com/kristiania/pgr200/database/dao/TestDataSource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="382">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1143,8 +907,8 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="345">
-            <caret line="23" column="88" selection-start-line="23" selection-start-column="88" selection-end-line="23" selection-end-column="88" />
+          <first_editor relative-caret-position="159">
+            <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
           </first_editor>
           <second_editor />
         </state>

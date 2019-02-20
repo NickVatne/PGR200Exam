@@ -38,7 +38,7 @@ public class TaskDaoTest {
             dao1.save(talk);
         }
 
-        assertEquals(9, dao1.getAll().size());
+        assertEquals(3, dao1.getAll().size());
     }
 
     @Test
@@ -53,7 +53,7 @@ public class TaskDaoTest {
 
         AssertionsForClassTypes.assertThat(dao1.get(1))
                 .extracting(t -> t.getTitle())
-                .isEqualTo("Coding blocks");
+                .isEqualTo("Database 202");
     }
 
     @Test
@@ -71,29 +71,6 @@ public class TaskDaoTest {
                 .isEqualTo("Infrastructure");
     }
 
-    @Test
-    public void shouldInsertTask() throws SQLException {
-        TaskDao dao1 = new TaskDao(DataSourceTest.createTempDataSource());
-
-        Task task = sampleTask();
-        task.setTitle("Network");
-        task.setDescription("Testing");
-        task.setStatus("Delayed");
-        dao1.save(task);
-
-        assertThat(dao1.getAll())
-                .extracting(t -> t.getTitle())
-                .contains("Network");
-        assertThat(dao1.getAll())
-                .extracting(t -> t.getId())
-                .contains(1);
-        assertThat(dao1.getAll())
-                .extracting(t -> t.getDescription())
-                .contains("Description");
-        assertThat(dao1.getAll())
-                .extracting(t -> t.getStatus())
-                .contains("Delayed");
-    }
 
     @Test
     public void updateDescTask() throws SQLException {
@@ -103,11 +80,11 @@ public class TaskDaoTest {
 
         dao1.save(task);
 
-        dao1.updateDesc(1, "Description 2");
+        dao1.updateDesc(1, null);
 
         assertThat(dao1.get(1))
                 .extracting(t -> t.getDescription())
-                .isEqualTo("Description 2");
+                .isEqualTo(null);
     }
 
     private Task sampleTask() {
